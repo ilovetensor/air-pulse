@@ -1,0 +1,18 @@
+State,City,Location,Type of Area,Numbers of  monitoring days (n),Ammonia(NH3)-  Annual average (µg/m3),Standard Deviation,Percentage- exceedence(24 hourly),Air Quality
+Andhra Pradesh,Hyderabad,Nacharam,Industrial,87,46,36,0,Low
+Andhra Pradesh,Hyderabad,Tarnaka,Residential and other,95,50,39,0,Moderate
+Andhra Pradesh,Hyderabad,ABIDS Circle,Residential and other,78,74,50,0,Moderate
+Delhi,Delhi,Mayapuri Ind. Area,Industrial,96,74,38,0,Moderate
+Delhi,Delhi,Sarojini Nagar,Residential and other,94,78,34,0,Moderate
+Maharashtra,Mumbai,Parel,Industrial,94,62,49,0,Moderate
+Maharashtra,Mumbai,Worli,Residential and other,92,59,54,0,Moderate
+Maharashtra,Mumbai,Kalbadevi,Residential and other,93,70,39,0,Moderate
+Maharashtra,Nagpur,Hingna Road,Industrial,83,26,30,0,Low
+Maharashtra,Nagpur,Maskasath,Residential and other,92,21,27,0,Low
+Maharashtra,Nagpur,"NEERI Lab., Nehru Marg",Residential and other,91,15,16,0,Low
+Tamil Nadu,Chennai,Thiruvottiyur Municipal Office,Industrial,85,35,43,0,Low
+Tamil Nadu,Chennai,Madras Medical College,Residential and other,84,35,34,0,Low
+Tamil Nadu,Chennai,NEERI CSIR Campus,Residential and other,86,31,36,0,Low
+West Bengal,Kolkata,Cossipore,Industrial,79,24,29,0,Low
+West Bengal,Kolkata,Lal Bazaar,Residential and other,72,21,23,0,Low
+West Bengal,Kolkata,Kasba,Residential and other,72,20,19,0,Low

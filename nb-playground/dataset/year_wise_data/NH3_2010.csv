@@ -1,0 +1,19 @@
+State,City,Location,Type of Area,Numbers of  monitoring days (n),Minimum,Maximum,Ammonia(NH3)-  Annual average (µg/m3),10 percentile,50 percentile,90 percentile,Standard Deviation,Percentage- exceedence(24 hourly),Air Quality
+Andhra Pradesh,Hyderabad,Nacharam,Industrial,96,28,103,51,35,48,66,15,0,Moderate
+Andhra Pradesh,Hyderabad,Tarnaka,Residential,96,22,119,56,38,55,76,17,0,Moderate
+Andhra Pradesh,Hyderabad,ABIDS Circle,Residential,96,27,124,67,45,62,97,20,0,Moderate
+Delhi,Delhi,Mayapuri Ind. Area,Industrial,96,32,136,84,59,87,108,20,0,Moderate
+Delhi,Delhi,Sarojini Nagar,Residential,96,30,120,77,52,75,106,20,0,Moderate
+Delhi,Delhi,Town Hall,Residential,96,44,137,89,66,84,121,22,0,Moderate
+Maharashtra,Mumbai,Parel,Industrial,98,5,459,54,6,38,118,62,1,Moderate
+Maharashtra,Mumbai,Worli,Residential,103,5,317,47,7,33,93,53,0,Low
+Maharashtra,Mumbai,Kalbadevi,Residential,84,5,285,48,7,35,102,45,0,Low
+Maharashtra,Nagpur,Hingna Road,Industrial,82,5,125,28,8,23,55,23,0,Low
+Maharashtra,Nagpur,Maskasath,Residential,99,5,107,39,13,32,75,25,0,Low
+Maharashtra,Nagpur,"NEERI Lab., Nehru Marg",Residential,99,5,204,27,8,22,51,24,0,Low
+Tamil Nadu,Chennai,Thiruvottiyur Municipal Office,Industrial,95,8,175,70,15,59,142,48,0,Moderate
+Tamil Nadu,Chennai,Madras Medical College,Residential,94,6,166,65,18,45,138,46,0,Moderate
+Tamil Nadu,Chennai,NEERI CSIR Campus,Residential,95,7,172,59,14,44,130,45,0,Moderate
+West Bengal,Kolkata,Cossipore,Industrial,96,5,18,8,5,7,13,3,0,Low
+West Bengal,Kolkata,Lal Bazaar,Residential,96,5,26,8,5,8,13,4,0,Low
+West Bengal,Kolkata,Kasba,Residential,96,5,17,7,5,6,12,3,0,Low

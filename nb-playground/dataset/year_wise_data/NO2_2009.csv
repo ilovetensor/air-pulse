@@ -1,0 +1,369 @@
+State,City,Location,Type,Numbers of  monitoring days (n),Nitrogen Dioxide(NO2)-  Annual average (µg/m3),Standard Deviation,Percentage- exceedence(24 hourly),Air Quality
+Andhra Pradesh,Guntur,Hindu College Guntur,Rsidential and other,48,9,0,0,NA
+Andhra Pradesh,Hydrabad,C.I.T.D. Balanagar,Industrial,109,27,4,0,Moderate
+Andhra Pradesh,Hydrabad,Nacharam,Industrial,92,15,5,0,Low
+Andhra Pradesh,Hydrabad,Uppal,Industrial,108,27,6,0,Moderate
+Andhra Pradesh,Hydrabad,ABIDS Circle,Rsidential and other,95,24,6,0,Moderate
+Andhra Pradesh,Hydrabad,Charminar,Rsidential and other,107,27,2,0,Moderate
+Andhra Pradesh,Hydrabad,Jubilee Hills,Rsidential and other,108,16,4,0,Low
+Andhra Pradesh,Hydrabad,Paradise,Rsidential and other,108,27,5,0,Moderate
+Andhra Pradesh,Hydrabad,Tarnaka,Rsidential and other,96,18,5,0,Low
+Andhra Pradesh,Hydrabad,Zoo Park,Sensitive,108,15,2,0,Low
+Andhra Pradesh,Kakinada,OB Ramanyapeta,Rsidential and other,16,9,0,0,NA
+Andhra Pradesh,Kurnool,Mourya Inn,Rsidential and other,99,9,0,0,Low
+Andhra Pradesh,Nalgonda,RO APPCB,Rsidential and other,42,24,2,0,NA
+Andhra Pradesh,Nellore,Venkatreddy Nagar,Rsidential and other,1,14,NA,0,NA
+Andhra Pradesh,Patencheru,Police Station,Rsidential and other,107,25,4,0,Moderate
+Andhra Pradesh,Ramagundam,RTC Bus Depot,Rsidential and other,84,14,10,0,Low
+Andhra Pradesh,Tirupati,Reg.Science Center,Sensitive,96,9,0,0,Low
+Andhra Pradesh,Vijaywada,Autonagar,Industrial,114,14,4,0,Low
+Andhra Pradesh,Vijaywada,Benz Circle,Rsidential and other,114,13,2,0,Low
+Andhra Pradesh,Visakhapatnam,"CWMP, RAMKY",Industrial,27,13,3,0,NA
+Andhra Pradesh,Visakhapatnam,Industrial Estate,Industrial,105,29,15,2,Moderate
+Andhra Pradesh,Visakhapatnam,Pedagantyada V,Industrial,27,17,5,0,NA
+Andhra Pradesh,Visakhapatnam,Ganapuram Area,Rsidential and other,107,34,13,0,Moderate
+Andhra Pradesh,Visakhapatnam,Panchayat Raj Office,Rsidential and other,101,23,10,0,Moderate
+Andhra Pradesh,Visakhapatnam,Police Barracks,Rsidential and other,106,38,14,0,Moderate
+Andhra Pradesh,Visakhapatnam,Seethammadhara,Rsidential and other,107,29,13,1,Moderate
+Andhra Pradesh,Visakhapatnam,INS-VIRBAHU,Sensitive,108,28,11,0,Moderate
+Andhra Pradesh,Warangal,KUDA Office,Rsidential and other,28,10,1,0,NA
+Assam,Bongaigaon,Barpara Office Bldg,Rsidential and other,110,15,5,0,Low
+Assam,Bongaigaon,Campus of Oil India,Rsidential and other,109,15,4,0,Low
+Assam,Daranga,BATAD,Rsidential and other,92,13,5,0,Low
+Assam,Dibrugarh,Dibrugarh Off. Bldg,Rsidential and other,103,13,2,0,Low
+Assam,Golaghat,Golaghat Off. Bldg.,Rsidential and other,104,14,3,0,Low
+Assam,Guwahati,Gopinath Nagar,Rsidential and other,234,15,3,0,Low
+Assam,Guwahati,Head Office,Rsidential and other,244,18,7,0,Low
+Assam,Guwahati,Santipur,Rsidential and other,241,16,5,0,Low
+Assam,Hailakandi,CISF Campus,Rsidential and other,37,13,3,0,NA
+Assam,Mergherita,Coal India Office,Rsidential and other,45,22,5,0,NA
+Assam,Nagaon,Water resource Div.,Rsidential and other,7,18,4,0,NA
+Assam,North Lakhimpur Town,Bazarpatti lakhimpur,Rsidential and other,40,15,3,0,NA
+Assam,Sibsagar,Sibasagar Off. Bldg,Rsidential and other,102,13,3,0,Low
+Assam,Silchar,Office Building RLO,Rsidential and other,93,15,3,0,Low
+Assam,Tezpur,Tezpur Office Bldg,Rsidential and other,99,13,3,0,Low
+Assam,Tinsukhia,Digboi carbon factor,Rsidential and other,18,14,1,0,NA
+Bihar,Patna,Beltron Bhawan,Rsidential and other,79,23,9,0,Moderate
+Bihar,Patna,Gandhi Maidan T C,Rsidential and other,44,51,20,7,NA
+Bihar,Chandigarh,Industrial Area,Industrial,138,19,10,0,Low
+Bihar,Chandigarh,Kaimbwala Village,Rsidential and other,145,12,6,0,Low
+Bihar,Chandigarh,Punjab Eng College,Rsidential and other,140,12,7,0,Low
+Chandigarh,Chandigarh,Sector-17 C,Rsidential and other,145,17,7,0,Low
+Chandigarh,Chandigarh,Sector-39,Rsidential and other,144,15,8,0,Low
+Chandigarh,Bhilai Nagar,M.P.L.U. Nigam,Industrial,95,32,1,0,Moderate
+Chandigarh,Bhilai Nagar,Regional Office,Rsidential and other,93,17,1,0,Low
+Chandigarh,Bhilai Nagar,Visak Hostel,Rsidential and other,92,26,1,0,Moderate
+Chandigarh,Korba," I.T.I, Rampur",Rsidential and other,101,22,1,0,Moderate
+Chandigarh,Korba,Near Ghantaghar,Rsidential and other,104,21,1,0,Moderate
+Chandigarh,Korba,Pragati Nagar,Rsidential and other,102,21,1,0,Moderate
+Chattisgarh,Raipur,Wool Worth I.Pvt.Ltd,Industrial,35,48,2,0,NA
+Chattisgarh,Raipur,"New HIG - 9, Hirapur",Rsidential and other,46,46,2,0,NA
+Chattisgarh,Raipur,Yatayat Thana,Rsidential and other,40,45,2,0,NA
+Dadra & Nagar Haveli,Silvassa,Khadoli Ind. Area,Industrial,78,17,1,0,Low
+Daman & Diu,Daman,Kadaiya Ind. Area,Industrial,76,19,4,0,Low
+Delhi,Delhi,Mayapuri Indl. Area,Industrial,96,55,22,15,High
+Delhi,Delhi,Shahdara,Industrial,74,43,12,0,High
+Delhi,Delhi,Shahzada Bagh,Industrial,77,44,14,1,High
+Delhi,Delhi,Janakpuri,Rsidential and other,77,56,6,0,High
+Delhi,Delhi,N.Y. School,Rsidential and other,96,51,22,18,High
+Delhi,Delhi,Nizamuddin,Rsidential and other,75,54,5,0,High
+Delhi,Delhi,Pritampura,Rsidential and other,74,33,7,0,Moderate
+Delhi,Delhi,Siri Fort,Rsidential and other,74,54,5,0,High
+Delhi,Delhi,Town Hall,Rsidential and other,96,57,24,22,High
+Goa,Mormugao,Mormugao Port Trust,Industrial,102,10,6,0,Low
+Goa,Panaji,Near Old GSPCB,Rsidential and other,99,13,8,0,Low
+Goa,Vasco,Electricity Deptt.,Industrial,78,18,9,0,Low
+Gujarat,Ahmedabad,Naroda,Industrial,104,23,4,0,Moderate
+Gujarat,Ahmedabad,Shardaban Hospital,Industrial,96,20,3,0,Low
+Gujarat,Ahmedabad,Behrampura,Rsidential and other,103,21,3,0,Moderate
+Gujarat,Ahmedabad,Cadilla Bridge Narol,Rsidential and other,101,24,5,0,Moderate
+Gujarat,Ahmedabad,L.D. Eng. College,Rsidential and other,98,18,2,0,Low
+Gujarat,Ahmedabad,R.C. High School,Rsidential and other,105,20,4,0,Low
+Gujarat,Anklesvar,Rallies India Ltd,Industrial,105,28,5,0,Moderate
+Gujarat,Anklesvar,Durga Traders,Rsidential and other,105,25,2,0,Moderate
+Gujarat,Jamnagar,Fisheries Office,Rsidential and other,105,27,4,0,Moderate
+Gujarat,Rajkot,Sardhara Indl.Corp.,Industrial,104,17,3,0,Low
+Gujarat,Rajkot,Regional Office,Rsidential and other,100,14,2,0,Low
+Gujarat,Surat,B.R.C. High School,Industrial,103,29,3,0,Moderate
+Gujarat,Surat,Near A.I. Office,Rsidential and other,103,26,2,0,Moderate
+Gujarat,Surat,S.V.R. Eng. College,Rsidential and other,106,23,3,0,Moderate
+Gujarat,Vadodara,CETP,Industrial,105,45,3,0,High
+Gujarat,Vadodara,Dandia Bazar,Rsidential and other,110,31,4,0,Moderate
+Gujarat,Vadodara,GPCB Office,Rsidential and other,110,15,3,0,Low
+Gujarat,Vapi,GEB,Industrial,98,24,2,0,Moderate
+Gujarat,Vapi,Vapi Nagar Palika,Rsidential and other,104,23,2,0,Moderate
+Haryana,Faridabad,"M/s Shivalik Global, Mathura Road, Faridabad",Industrial,NA,24,NA,NA,NA
+Haryana,Faridabad,"HSPCB office, Ballabgard, Faridabad",Rsidential and other,NA,22,NA,NA,NA
+Haryana,Hisar,Urban Estate-II,Rsidential and other,11,5,1,0,NA
+Haryana,Yamunanagar,Ballarpur Industries,Industrial,34,27,4,0,NA
+Himachal Pradesh,Baddi,AHC,Industrial,59,13,5,0,Low
+Himachal Pradesh,Baddi,Industry Department,Industrial,78,13,4,0,Low
+Himachal Pradesh,Baddi,Housing Board,Rsidential and other,31,9,2,0,NA
+Himachal Pradesh,Damtal,Old Road,Rsidential and other,92,13,8,0,Low
+Himachal Pradesh,Damtal,Regional Office,Rsidential and other,106,11,6,0,Low
+Himachal Pradesh,Nahan,Industrial Area,Industrial,150,19,2,0,Low
+Himachal Pradesh,Nahan,Trilok Pur,Rsidential and other,160,15,1,0,Low
+Himachal Pradesh,Nalagarh,M.C.,Rsidential and other,63,13,4,0,Low
+Himachal Pradesh,Paonta Sahib,Gondpur Indl. Area,Industrial,134,18,1,0,Low
+Himachal Pradesh,Paonta Sahib,Paonta Sahib,Rsidential and other,133,15,1,0,Low
+Himachal Pradesh,Parwanoo,AC Office Bldg.,Industrial,125,12,3,0,Low
+Himachal Pradesh,Parwanoo,Central Laboratory,Rsidential and other,117,11,3,0,Low
+Himachal Pradesh,Shimla,Bus Stand,Rsidential and other,132,12,5,0,Low
+Himachal Pradesh,Shimla,Tekka Bench Ridge,Sensitive,127,7,3,0,Low
+Jammu & Kashmir,Jammu,B.Brahmana,Industrial,38,14,4,0,NA
+Jammu & Kashmir,Jammu,M.A.Stadium,Rsidential and other,45,12,3,0,NA
+Jammu & Kashmir,Jammu,Regional Office,Rsidential and other,51,12,3,0,Low
+Jharkhand,Dhanbad,Regional Office,Rsidential and other,47,41,9,2,NA
+Jharkhand,Jamshedpur,Bistupur Vehicle  TC,Industrial,103,49,3,0,High
+Jharkhand,Jamshedpur,Golmuri Vehical TC,Industrial,99,49,5,1,High
+Jharkhand,Jharia,M.A.D.A.,Industrial,72,41,7,1,High
+Jharkhand,Ranchi,Albert Ekka Chowk,Rsidential and other,84,32,3,0,Moderate
+Jharkhand,Sindri,BIT,Industrial,66,40,6,0,Moderate
+Karnataka,Bangalore,Graphite India,Industrial,97,42,3,0,High
+Karnataka,Bangalore,KHB Indl Area,Industrial,95,38,4,0,Moderate
+Karnataka,Bangalore,Peenya Indl. Area,Industrial,63,38,4,0,Moderate
+Karnataka,Bangalore,AMCO Batteries,Rsidential and other,101,38,5,0,Moderate
+Karnataka,Bangalore,R.V.College,Rsidential and other,6,23,1,NA,NA
+Karnataka,Bangalore,Yeshwanthpura,Rsidential and other,106,40,3,0,Moderate
+Karnataka,Bangalore,Victoria Hospital,Sensitive,98,37,5,0,High
+Karnataka,Belgaum,Karnataka SPCB,Industrial,78,15,5,0,Low
+Karnataka,Gulbarga,Govt. Hospital,Sensitive,99,14,3,0,Low
+Karnataka,Hassan,N.R. Circle,Rsidential and other,107,22,4,0,Moderate
+Karnataka,Hubli-Dharwad,L. Industrial Area,Industrial,88,13,2,0,Low
+Karnataka,Hubli-Dharwad,Rani C. Circle,Rsidential and other,96,12,2,0,Low
+Karnataka,Mangalore,Stides Premises,Industrial,104,6,1,0,Low
+Karnataka,Mysore,K.R. Circle,Rsidential and other,103,31,7,0,Moderate
+Karnataka,Mysore,KSPCB Building,Industrial,107,28,6,0,Moderate
+Kerala,Kochi,Eloor,Industrial,90,7,2,0,Low
+Kerala,Kochi,FACT Udyogmandal,Industrial,92,7,2,0,Low
+Kerala,Kochi,Irumpanam,Industrial,107,11,3,0,Low
+Kerala,Kochi,CSIR Complex,Industrial,107,13,4,0,Low
+Kerala,Kochi,Ernakulum South,Rsidential and other,108,19,7,0,Low
+Kerala,Kochi,"FCI, OEN C. O. Bldg",Rsidential and other,108,14,5,0,Low
+Kerala,Kochi,M.G. Road,Rsidential and other,108,16,5,0,Low
+Kerala,Kottayam,Vadavathoor,Industrial,96,16,1,0,Low
+Kerala,Kottayam,Kottayam,Rsidential and other,96,23,1,0,Moderate
+Kerala,Kozhikode,Nallalam,Industrial,108,9,3,0,Low
+Kerala,Kozhikode,Kozhikode City,Rsidential and other,105,9,3,0,Low
+Kerala,Palakkad,Carboradum/SEPR,Industrial,118,7,3,0,Low
+Kerala,Trivandrum,Hi Tech Chackai,Industrial,108,19,2,0,Low
+Kerala,Trivandrum,Sasthamangalam,Rsidential and other,110,27,4,0,Moderate
+Kerala,Trivandrum,SMV School,Rsidential and other,106,30,4,0,Moderate
+Maharashtra,Amravati,Apurva Oil and Ind.,Industrial,104,14,2,0,Low
+Maharashtra,Amravati,Govt. Coll. of Engg.,Rsidential and other,102,12,2,0,Low
+Maharashtra,Amravati,Rajkamal Square,Rsidential and other,104,15,2,0,Low
+Maharashtra,Aurangabad (MS),C.A.D.A. Office,Rsidential and other,96,24,4,0,Moderate
+Maharashtra,Aurangabad (MS),S.B.E.S. College,Rsidential and other,96,27,5,0,Moderate
+Maharashtra,Aurangabad (MS),Bibi-Ka-Maqbara,Sensitive,97,23,3,0,Moderate
+Maharashtra,Chandrapur,M.I.D.C.,Industrial,77,35,13,0,Moderate
+Maharashtra,Chandrapur,Nagar Parishad,Rsidential and other,69,33,12,0,Moderate
+Maharashtra,Chandrapur,"SRO, Bapat Nagar",Rsidential and other,75,35,14,0,Moderate
+Maharashtra,Kolhapur,Mahadwar Road,Rsidential and other,101,14,5,0,Low
+Maharashtra,Kolhapur,S.T. Stand,Rsidential and other,103,20,5,0,Low
+Maharashtra,Kolhapur,Shivaji University,Rsidential and other,103,8,3,0,Low
+Maharashtra,Mahad,EHS mahad,Industrial,45,35,4,0,NA
+Maharashtra,Mahad,"MNP, Phulle Hall",Rsidential and other,38,29,6,0,NA
+Maharashtra,Mahad,"WTP, Bhirwadi",Rsidential and other,44,34,5,0,NA
+Maharashtra,Mumbai,Parel,Industrial,93,41,22,6,High
+Maharashtra,Mumbai,Kalbadevi,Rsidential and other,87,43,20,7,High
+Maharashtra,Mumbai,Worli,Rsidential and other,95,39,20,3,Moderate
+Maharashtra,Nagpur,MIDC Industrial Area/Hingana,Industrial,94,30,20,5,Moderate
+Maharashtra,Nagpur,MIDC Office,Industrial,105,36,8,0,Moderate
+Maharashtra,Nagpur,Govt. Poly. College,Rsidential and other,93,33,5,0,Moderate
+Maharashtra,Nagpur,Institution of Eng.,Rsidential and other,105,36,9,1,Moderate
+Maharashtra,Nagpur,Maskasath,Rsidential and other,98,26,18,2,Moderate
+Maharashtra,Nagpur,NEERI Lab,Rsidential and other,97,28,21,3,Moderate
+Maharashtra,Nashik,VIP Industrial Area,Industrial,102,29,5,0,Moderate
+Maharashtra,Nashik,NMC Building,Rsidential and other,103,29,5,0,Moderate
+Maharashtra,Nashik,RTO Colony Tank,Rsidential and other,103,29,5,0,Moderate
+Maharashtra,Navi Mumbai,MIDC Taloja,Industrial,105,54,15,0,High
+Maharashtra,Navi Mumbai,MPCB Central Lab,Industrial,104,42,16,3,High
+Maharashtra,Navi Mumbai,Airoli,Rsidential and other,102,36,15,3,Moderate
+Maharashtra,Navi Mumbai,Kharghar,Rsidential and other,100,38,15,1,Moderate
+Maharashtra,Navi Mumbai,Nerul,Rsidential and other,107,41,23,7,High
+Maharashtra,Navi Mumbai,Panvel Water Works,Rsidential and other,103,41,15,3,High
+Maharashtra,Pune,Bhosari,Industrial,106,35,11,0,Moderate
+Maharashtra,Pune,Nalstop,Rsidential and other,103,42,13,1,High
+Maharashtra,Pune,Swargate,Rsidential and other,110,43,13,1,High
+Maharashtra,Solapur,WIT Campus,Industrial,104,36,4,0,Moderate
+Maharashtra,Solapur,Chitale Clinic,Rsidential and other,105,36,4,0,Moderate
+Maharashtra,Thane,Balkum/Kolshet,Industrial,86,23,5,0,Moderate
+Maharashtra,Thane,Kopri,Rsidential and other,98,13,4,0,Low
+Maharashtra,Thane,Naupada,Rsidential and other,101,20,5,0,Low
+Meghalaya,Byrnihat,EPIP,Industrial,44,12,6,0,NA
+Meghalaya,Dawki,Terrance Building,Rsidential and other,14,5,2,0,NA
+Meghalaya,Shillong,Boards Office,Rsidential and other,82,5,1,0,Low
+Meghalaya,Shillong,Tuberculosis Hosp.,Rsidential and other,88,13,5,0,Low
+Mizoram,Aizawl,Bawngkawn,Rsidential and other,104,7,2,0,Low
+Mizoram,Aizawl,Khatla,Rsidential and other,103,6,2,0,Low
+Mizoram,Aizawl,Laipuitlang,Rsidential and other,104,5,1,0,Low
+Madhya Pradesh,Bhopal,Govindpura,Industrial,45,16,4,0,NA
+Madhya Pradesh,Bhopal,Hamidia Road,Rsidential and other,58,23,5,0,Moderate
+Madhya Pradesh,Bhopal,T.T.Nagar,Rsidential and other,60,13,4,0,Low
+Madhya Pradesh,Dewas,EID Perry (I) Ltd.,Industrial,95,20,5,0,Low
+Madhya Pradesh,Dewas,Vikas Nagar,Rsidential and other,94,18,4,0,Low
+Madhya Pradesh,Gwalior,Dindayal Nagar,Rsidential and other,46,17,4,0,NA
+Madhya Pradesh,Gwalior,Maharaj Bada,Rsidential and other,14,18,4,0,NA
+Madhya Pradesh,Indore,M.P. Laghu Udyog,Industrial,43,20,5,0,NA
+Madhya Pradesh,Indore,Kothari Market,Rsidential and other,43,20,7,0,NA
+Madhya Pradesh,Indore,Telephone Nagar,Rsidential and other,83,11,4,0,Low
+Madhya Pradesh,Jabalpur,Vijay Nagar,Rsidential and other,94,24,2,0,Moderate
+Madhya Pradesh,Nagda,Chem. D. Labour Club,Industrial,62,17,4,0,Low
+Madhya Pradesh,Nagda,BCI Labour Club,Rsidential and other,86,24,4,0,Moderate
+Madhya Pradesh,Nagda,Grasim Kalyan Kendra,Rsidential and other,95,30,5,0,Moderate
+Madhya Pradesh,Sagar,Pt. Deendayal Nagar,Rsidential and other,86,18,2,0,Low
+Madhya Pradesh,Satna,Sub-Divisional Off.,Industrial,41,6,1,0,NA
+Madhya Pradesh,Satna,Regional Office,Rsidential and other,26,6,1,0,NA
+Madhya Pradesh,Ujjain, District Office,Industrial,74,15,2,0,Low
+Madhya Pradesh,Ujjain,Regional Office,Rsidential and other,83,9,2,0,Low
+Madhya Pradesh,Ujjain,Mahakal Temple,Sensitive,80,11,2,0,Low
+Nagaland,Dimapur,Bank Colony,Rsidential and other,45,17,3,0,NA
+Nagaland,Dimapur,Dhobinala,Rsidential and other,45,16,3,0,NA
+Orissa,Angul, Industrial Estate,Industrial,104,22,2,0,Moderate
+Orissa,Angul,NALCO Township,Rsidential and other,84,17,2,0,Low
+Orissa,Balasore,Sahadevkhunta,Rsidential and other,51,12,1,0,Low
+Orissa,Berhampur,Regional Office,Rsidential and other,105,14,3,0,Low
+Orissa,Bhubaneshwar,Capital Police Stn.,Rsidential and other,105,20,3,0,Low
+Orissa,Bhubaneshwar,IRC,Rsidential and other,104,18,3,0,Low
+Orissa,Bhubaneshwar,OSPCB Bldg,Rsidential and other,112,19,4,0,Low
+Orissa,Cuttack,"Badambi, Cuttack",Rsidential and other,104,24,5,0,Moderate
+Orissa,Cuttack,R.O. Cuttack,Rsidential and other,105,16,2,0,Low
+Orissa,Rayagada,LPS H. School,Industrial,105,22,4,0,Moderate
+Orissa,Rayagada,Regional Office,Rsidential and other,111,21,4,0,Moderate
+Orissa,Rourkela,IDL Police Out-post,Rsidential and other,105,11,1,0,Low
+Orissa,Rourkela,Regional Office,Rsidential and other,106,11,2,0,Low
+Orissa,Sambalpur,"PHD Ofice, Sambalpur",Rsidential and other,125,16,2,0,Low
+Orissa,Talcher,Coal Field Area,Industrial,95,27,2,0,Moderate
+Orissa,Talcher,T.T.P.S Colony,Industrial,104,19,2,0,Low
+Pondicherry,Pondicherry,PIPDIC,Industrial,63,13,3,0,Low
+Pondicherry,Pondicherry,Chamber of Commerce,Rsidential and other,100,7,2,0,Low
+Pondicherry,Pondicherry,DSTC Office,Rsidential and other,59,12,2,0,Low
+Punjab,Amritsar,Nagina Soap Factory,Industrial,65,35,4,0,Moderate
+Punjab,Amritsar,A-1 Platters,Rsidential and other,81,35,3,0,Moderate
+Punjab,Bathinda,Bathinda Milk Plant,Industrial,113,21,4,0,Moderate
+Punjab,Dera Bassi,Bhanakarpur Road,Industrial,132,21,4,0,Moderate
+Punjab,Dera Bassi,Winsome Yarns Ltd,Industrial,124,21,4,0,Moderate
+Punjab,Gobindgarh,Raj Steel,Industrial,120,29,6,0,Moderate
+Punjab,Gobindgarh,Modi oil & GM,Rsidential and other,44,29,8,0,NA
+Punjab,Gobindgarh,United Rolling Mills,Rsidential and other,137,30,6,0,Moderate
+Punjab,Jalandhar,Focal Point,Industrial,23,32,5,0,NA
+Punjab,Jalandhar,Punjab Maltex,Industrial,62,32,2,0,Moderate
+Punjab,Jalandhar,MC Tube Well No.27,Rsidential and other,107,31,2,0,Moderate
+Punjab,Jalandhar,Regional Office,Rsidential and other,116,26,2,0,Moderate
+Punjab,Khanna,Markfed Vanaspati,Industrial,136,36,7,0,Moderate
+Punjab,Khanna,A S School,Rsidential and other,135,36,7,0,Moderate
+Punjab,Ludhiana,Milk Plant,Industrial,105,36,7,0,Moderate
+Punjab,Ludhiana,Rita Sewing Machines,Industrial,91,38,7,0,Moderate
+Punjab,Ludhiana,Bharat Nagar Chowk,Rsidential and other,31,39,5,0,NA
+Punjab,Ludhiana,PPCB Office Bldg.,Rsidential and other,124,38,7,0,Moderate
+Punjab,Naya Nangal,NFL Guest House,Rsidential and other,129,20,2,0,Low
+Punjab,Naya Nangal,Punjab Alkalies,Rsidential and other,109,20,4,0,Low
+Rajasthan,Alwar,Gaurav Solvex Ltd.,Industrial,99,23,5,0,Moderate
+Rajasthan,Alwar,RIICO Pump House,Industrial,100,23,6,0,Moderate
+Rajasthan,Alwar,Regional Office,Rsidential and other,106,23,6,0,Moderate
+Rajasthan,Jaipur,MIA,Industrial,105,35,4,0,Moderate
+Rajasthan,Jaipur,VKIA,Industrial,107,42,5,0,High
+Rajasthan,Jaipur,Ajmeri Gate,Rsidential and other,105,38,4,0,Moderate
+Rajasthan,Jaipur,Chandpole,Rsidential and other,103,40,10,1,Moderate
+Rajasthan,Jaipur,RSPCB Office,Rsidential and other,106,26,5,0,Moderate
+Rajasthan,Jaipur,Vidyadhar Nagar,Rsidential and other,103,36,5,0,Moderate
+Rajasthan,Jodhpur,Basni Indl. Area,Industrial,87,24,4,0,Moderate
+Rajasthan,Jodhpur,DIC,Industrial,99,24,6,0,Moderate
+Rajasthan,Jodhpur,Housing Board,Rsidential and other,83,21,3,0,Moderate
+Rajasthan,Jodhpur,M M Police Thane,Rsidential and other,102,21,4,0,Moderate
+Rajasthan,Jodhpur,Shashtri Nagar,Rsidential and other,84,24,1,0,Moderate
+Rajasthan,Jodhpur,Sojati Gate,Rsidential and other,83,24,1,0,Moderate
+Rajasthan,Kota,Regional Office,Industrial,104,27,13,0,Moderate
+Rajasthan,Kota,Municipal C. Bldg,Rsidential and other,103,25,12,0,Moderate
+Rajasthan,Kota,Samcore Glass,Rsidential and other,105,21,8,0,Moderate
+Rajasthan,Udaipur,"Regional Office, MIA",Industrial,101,28,12,0,Moderate
+Rajasthan,Udaipur,Ambamata,Rsidential and other,97,22,12,0,Moderate
+Rajasthan,Udaipur,Town Hall,Rsidential and other,102,30,9,0,Moderate
+Tamilnadu,Chennai,Govt. High School,Industrial,94,20,4,0,Low
+Tamilnadu,Chennai,Kathivakkam,Industrial,93,19,5,0,Low
+Tamilnadu,Chennai,M C Thiruvottiyur,Industrial,94,13,13,0,Low
+Tamilnadu,Chennai,Thiruvottiyur,Industrial,93,22,4,0,Moderate
+Tamilnadu,Chennai,Madras Med. College,Rsidential and other,90,15,13,0,Low
+Tamilnadu,Chennai,NEERI CSIR Campus,Rsidential and other,96,12,8,0,Low
+Tamilnadu,Coimbatore,SIDCO Office,Industrial,82,30,12,0,Moderate
+Tamilnadu,Coimbatore,Dist. Coll. Office,Rsidential and other,90,26,10,0,Moderate
+Tamilnadu,Coimbatore,Ponniyarajapuram,Rsidential and other,74,27,12,0,Moderate
+Tamilnadu,Madurai,Fenners (I) Ltd.,Industrial,98,26,5,0,Moderate
+Tamilnadu,Madurai,Highway Bldg.,Rsidential and other,97,25,3,0,Moderate
+Tamilnadu,Madurai,Kunnathur Chatram,Rsidential and other,93,25,2,0,Moderate
+Tamilnadu,Salem,Sowdeswari College,Rsidential and other,129,24,4,0,Moderate
+Tamilnadu,Thoothukudi,Raja Agencies,Industrial,88,14,6,0,Low
+Tamilnadu,Thoothukudi,AVM Jewellery Bldg.,Rsidential and other,95,14,5,0,Low
+Tamilnadu,Thoothukudi,Fisheries College,Rsidential and other,94,13,5,0,Low
+Uttar Pradesh,Agra,Nunhai,Sensitive,90,11,2,0,Low
+Uttar Pradesh,Agra,Regional Office,Sensitive,95,10,2,0,Low
+Uttar Pradesh,Agra,"DIC, Nunhai",Sensitive,104,35,12,0,High
+Uttar Pradesh,Agra,Itmad-ud-daulah,Sensitive,104,24,11,0,Moderate
+Uttar Pradesh,Agra,Rambagh,Sensitive,103,25,12,0,Moderate
+Uttar Pradesh,Agra,Taj Mahal,Sensitive,265,19,11,0,Moderate
+Uttar Pradesh,Allahabad,Bharat Yantra Nigam,Rsidential and other,102,19,13,0,Low
+Uttar Pradesh,Allahabad,Square Crossing,Rsidential and other,103,28,20,3,Moderate
+Uttar Pradesh,Anpara,Renusagar Colony,Industrial,89,29,4,0,Moderate
+Uttar Pradesh,Anpara, Anpara Colony,Industrial,87,29,3,0,Moderate
+Uttar Pradesh,Firozabad,CDGI,Industrial,101,34,5,0,Moderate
+Uttar Pradesh,Firozabad,Raza Ka Tal,Rsidential and other,95,32,5,0,Moderate
+Uttar Pradesh,Firozabad,Tilak Nagar,Rsidential and other,93,30,4,0,Moderate
+Uttar Pradesh,Ghaziabad,Atlas Cycles Ltd,Industrial,78,32,3,0,Moderate
+Uttar Pradesh,Ghaziabad,Bulandshahar R.I.A.,Industrial,74,30,4,0,Moderate
+Uttar Pradesh,Jhansi,Jail Chauraha,Rsidential and other,115,29,2,0,Moderate
+Uttar Pradesh,Jhansi,Veeranga Nagar,Rsidential and other,104,26,2,0,Moderate
+Uttar Pradesh,Kanpur,Fazal Ganj,Industrial,80,33,4,0,Moderate
+Uttar Pradesh,Kanpur,Jajmau,Industrial,82,30,5,0,Moderate
+Uttar Pradesh,Kanpur,Dabauli,Rsidential and other,77,31,5,0,Moderate
+Uttar Pradesh,Kanpur,Deputy Ka Parao,Rsidential and other,84,30,5,0,Moderate
+Uttar Pradesh,Kanpur, Kidwai nagar,Rsidential and other,89,31,5,0,Moderate
+Uttar Pradesh,Khurja,CGCRI,Industrial,81,31,4,0,Moderate
+Uttar Pradesh,Khurja,Ahirpara,Rsidential and other,78,22,6,0,Moderate
+Uttar Pradesh,Lucknow,Talkatora,Industrial,93,37,3,0,Moderate
+Uttar Pradesh,Lucknow, Aminabad,Rsidential and other,94,36,3,0,Moderate
+Uttar Pradesh,Lucknow,Chandganj  Nagar,Rsidential and other,96,36,2,0,Moderate
+Uttar Pradesh,Lucknow,Kapoor Hotel,Rsidential and other,90,35,2,0,Moderate
+Uttar Pradesh,Lucknow,Mahanagar,Rsidential and other,77,35,2,0,Moderate
+Uttar Pradesh,Meerut,Begum Bridge,Rsidential and other,41,46,7,0,NA
+Uttar Pradesh,Meerut,Thana Railway Road,Rsidential and other,29,43,5,0,NA
+Uttar Pradesh,Noida,GEE-PEE,Industrial,98,33,6,0,Moderate
+Uttar Pradesh,Noida,"R.O, UPPB",Rsidential and other,92,33,5,0,Moderate
+Uttar Pradesh,Varanasi,Regional Office,Rsidential and other,89,20,1,0,Low
+Uttar Pradesh,Varanasi,Sigra,Rsidential and other,94,20,1,0,Low
+Uttarakhand,Dehradoon ,Raipur Road ,Industrial,33,29,2,0,NA
+Uttarakhand,Dehradoon ,Clock Tower,Rsidential and other,51,31,3,0,Moderate
+West Bengal,Asansol,Asansol M.C.,Industrial,102,62,19,26,Critical
+West Bengal,Asansol,"Kangsabati Spinning Mill, Barjora",Industrial,43,55,15,12,NA
+West Bengal,Asansol,"Burnpur Town Department, Burnpur",Industrial,43,49,13,0,NA
+West Bengal,Durgapur,"Dew India Ltd., Dr. B. C. Roy Avenue, Durgapur",Industrial,102,73,19,14,Critical
+West Bengal,Durgapur,"Kwality Hotel, Bhiringi More, benachiti",Industrial,102,64,18,1,Critical
+West Bengal,Durgapur,"PCBL Club, Muchipara, Bidhannagar",Rsidential and other,102,55,15,6,High
+West Bengal,Durgapur,"DMC Water Works, Angadpur",Rsidential and other,43,53,12,7,NA
+West Bengal,Haldia,Super Market,Industrial,9,67,2,0,NA
+West Bengal,Haldia,WBIIDC,Industrial,9,67,2,0,NA
+West Bengal,Howrah,Bandhaghat,Industrial,104,85,35,41,Critical
+West Bengal,Howrah,Howrah MC,Industrial,104,81,37,38,Critical
+West Bengal,Howrah,Bator,Rsidential and other,104,59,24,23,High
+West Bengal,Howrah,Naskarpara,Rsidential and other,104,70,33,39,Critical
+West Bengal,Kolkata,"Traffic Guard Building, Behala Chowrasta",Industrial,105,77,31,39,Critical
+West Bengal,Kolkata,Cossipore Police Stn,Industrial,97,73,30,39,Critical
+West Bengal,Kolkata," National Sample Survey Building, Dunlop Bridge",Industrial,104,67,27,34,Critical
+West Bengal,Kolkata,"Upanagari Sporting Club, Baishnabghata",Rsidential and other,105,76,16,7,Critical
+West Bengal,Kolkata,Kasba,Rsidential and other,95,47,23,13,High
+West Bengal,Kolkata,Lal Bazar,Rsidential and other,96,63,28,26,Critical
+West Bengal,Kolkata,"A.J.C Bose Road, Minto Park",Rsidential and other,104,66,24,26,Critical
+West Bengal,Kolkata,"KMC Office Building, Moulali",Rsidential and other,105,79,33,40,Critical
+West Bengal,Kolkata,"CK Market, Salt Lake",Rsidential and other,105,67,27,30,Critical
+West Bengal,Barrackpore,Barrackpore Police Station,Rsidential and other,44,58,15,16,NA
+West Bengal,Barrackpore,Dum Dum Telephone Exchange,Rsidential and other,44,77,25,34,NA
+West Bengal,Barrackpore,Khardah Municipality,Rsidential and other,44,78,29,34,NA
+West Bengal,Raniganj,Jamuria Municipality,Rsidential and other,17,62,11,0,NA
+West Bengal,Raniganj,"SKS Public School, Mangalpur",Rsidential and other,43,114,70,58,NA
+West Bengal,Raniganj,"Raniganj Municipality, Raniganj",Rsidential and other,43,73,12,16,NA
+West Bengal,Sankrail,"P. Mukherjee's House, (Near SBI)",Rsidential and other,31,42,13,3,NA
+West Bengal,Sankrail,Bagnan Police Station,Rsidential and other,31,81,29,42,NA
+West Bengal,Sankrail,Dhulagarh Gram Panchayet Office,Rsidential and other,31,80,21,48,NA
+West Bengal,Sankrail,"Bharat Co-operative Housing Society, Sankrail",Rsidential and other,31,68,17,26,NA
+West Bengal,South suburban,"P. Roy Industrial Training Institute, Amtala",Rsidential and other,43,58,58,21,NA
+West Bengal,South suburban,Baruipur Police Station,Rsidential and other,43,56,20,19,NA
+West Bengal,South suburban,"Chanditala Water Supply Pump House, Tollygunge",Rsidential and other,42,64,29,29,NA

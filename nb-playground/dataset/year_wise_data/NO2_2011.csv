@@ -1,0 +1,530 @@
+State,City,Location,Station code,Type,Category of ES,No. of mon. days (n),Min,Max,NO2 Annual average (µg/m3),10 percentile,90 percentile,Std. Dev.,Percentage- exceedence(24 hourly),Air Quality
+Andhra Pradesh,Chitoor,GNC Toll Gate Tirumala,582,RIRuO,NA,72,9,9,9,9,9,0,0,Low
+Andhra Pradesh,Guntur,"Near Hindu College, Market Road",583,RIRuO,NA,69,9,13,10,9,11,1,0,Low
+Andhra Pradesh,Hydrabad,"Tarnaka, NEERI Lab. IICT Campus",150,RIRuO,NA,94,5,55,33,24,40,8,0,Moderate
+Andhra Pradesh,Hydrabad,"Nacharam, Industrial Estate",151,RIRuO,NA,93,13,54,32,21,38,7,0,Moderate
+Andhra Pradesh,Hydrabad,ABIDS Circle General Post Office,152,RIRuO,NA,95,10,62,35,27,41,7,0,Moderate
+Andhra Pradesh,Hydrabad,Balanagar,95,RIRuO,NA,110,14,108,32,22,41,12,2,Moderate
+Andhra Pradesh,Hydrabad,"Uppal, Modern Foods & Industries IDA",203,RIRuO,NA,107,18,48,30,21,39,6,0,Moderate
+Andhra Pradesh,Hydrabad,Jublee Hills,365,RIRuO,NA,108,11,49,19,13,26,7,0,Low
+Andhra Pradesh,Hydrabad,Paradise,393,RIRuO,NA,114,15,51,30,22,38,7,0,Moderate
+Andhra Pradesh,Hydrabad,Charminar,394,RIRuO,NA,117,16,46,29,21,36,6,0,Moderate
+Andhra Pradesh,Hydrabad,Zoo Park,470,RIRuO,NA,116,11,335,18,12,19,30,1,Low
+Andhra Pradesh,Kakinada,Office Building Ramanayyapeta,578,RIRuO,NA,36,9,9,9,9,9,0,0,Null
+Andhra Pradesh,Kothagudem,"CER Club, Khamam",581,RIRuO,NA,71,9,9,9,9,9,0,0,Low
+Andhra Pradesh,Kurnool,Mourya Inn,466,RIRuO,NA,90,9,9,9,9,9,0,0,Low
+Andhra Pradesh,Nalgonda,AP PCB Nalgonda,577,RIRuO,NA,108,11,23,18,14,21,3,0,Low
+Andhra Pradesh,Nellore,"Venkatareddy nagar, Vedayapalem",580,RIRuO,NA,60,9,13,10,9,11,1,0,Low
+Andhra Pradesh,Patencheru,"Police Station, Medak, Ramachadrapuram",468,RIRuO,NA,108,16,50,22,19,25,4,0,Moderate
+Andhra Pradesh,Ramagundam,"Godavarikhani, Ramagundam, Karimnagar",465,RIRuO,NA,91,4,38,11,9,15,5,0,Low
+Andhra Pradesh,Tirupati,"Regional Science Centre, Chittoor Bypass",389,RIRuO,NA,90,9,24,9,9,9,2,0,Low
+Andhra Pradesh,Vijaywada,Benz Circle,462,RIRuO,NA,73,10,26,11,10,14,2,0,Low
+Andhra Pradesh,Vijaywada,Autonagar,469,RIRuO,NA,70,10,17,11,10,14,2,0,Low
+Andhra Pradesh,Warangal,"KUDA Office, Hanumakonda",579,RIRuO,NA,91,5,36,11,9,14,3,0,Low
+Andhra Pradesh,Vishakhapatnam,"Panchayat Raj office, Mindi",234,RIRuO,NA,87,9,38,20,12,27,6,0,Low
+Andhra Pradesh,Vishakhapatnam,"Industrial Estate, Marripalem",233,RIRuO,NA,82,9,43,21,13,31,7,0,Moderate
+Andhra Pradesh,Vishakhapatnam,Police Barracks,371,RIRuO,NA,78,11,85,27,18,33,10,1,Moderate
+Andhra Pradesh,Vishakhapatnam,"INS-Virabahu, Naval Area",387,RIRuO,NA,77,11,30,19,13,25,4,0,Low
+Andhra Pradesh,Vishakhapatnam,Seethammadhara,388,RIRuO,NA,80,10,32,18,12,23,5,0,Low
+Andhra Pradesh,Vishakhapatnam,Ganapuram Area,467,RIRuO,NA,80,10,73,29,20,36,9,0,Moderate
+Andhra Pradesh,Vishakhapatnam,"Pedagantyada, Gajuwada",584,RIRuO,NA,69,9,25,16,11,22,4,0,Low
+Andhra Pradesh,Vishakhapatnam,"CWMP, RAMKY, Parawada",585,RIRuO,NA,71,9,19,13,10,17,3,0,Low
+Assam,Bongaigaon,"Oil India Ltd. PS-6, Chirang",542,RIRuO,NA,103,8,16,12,10,14,2,0,Low
+Assam,Bongaigaon,Barpara Office Building,520,RIRuO,NA,104,8,28,15,12,18,3,0,Low
+Assam,Bongaigaon,B.R.P.L. Expert Hostel,218,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Assam,Daranga,"BATAD, Baska",566,RIRuO,NA,77,10,20,14,11,16,2,0,Low
+Assam,Dibrugarh,Dibrugarh Office Building,538,RIRuO,NA,98,9,17,13,11,15,2,0,Low
+Assam,Golaghat,Golaghat Office Building,539,ES,Numaligarh,89,9,25,15,12,17,2,0,Low
+Assam,Guwahati,"Head Office, Bamunimaidam",193,RIRuO,NA,251,9,20,14,13,16,2,0,Low
+Assam,Guwahati,"Boragaon, IASST, Kamrup",603,RIRuO,NA,99,8,20,14,11,16,2,0,Low
+Assam,Guwahati,"Guwahati University, Kamrup",602,RIRuO,NA,208,7,46,13,11,15,3,0,Low
+Assam,Guwahati,"ITI Building, Gopinath Nagar",519,RIRuO,NA,246,8,22,15,13,18,2,0,Low
+Assam,Guwahati,"Khanapara, Central Dairy, Kamrup",596,RIRuO,NA,250,6,20,13,11,15,2,0,Low
+Assam,Guwahati,"Near Pragjyotish College, Santipur",541,RIRuO,NA,250,7,19,14,11,17,2,0,Low
+Assam,Margherita,Coal India Office,586,RIRuO,NA,100,13,26,20,17,24,3,0,Low
+Assam,Lakhimpur,"Bazar Patti, North Lakhimpur Town",587,RIRuO,NA,103,10,18,13,12,15,1,0,Low
+Assam,Nagaon,"Water Resources Div., Christian Patty",595,RIRuO,NA,98,7,19,13,10,15,2,0,Low
+Assam,Nalbari,PWD Rural Div Office Complex,597,RIRuO,NA,92,10,23,15,13,17,2,0,Low
+Assam,Sibsagar,Sibasagar Office Building,537,RIRuO,NA,101,9,18,14,12,17,2,0,Low
+Assam,Sibsagar,"Usha Lodge, near ONGCL Colony",604,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Assam,Silchar,Janiganj Govt. Boys HS School campus,607,RIRuO,NA,97,10,17,14,12,16,2,0,Low
+Assam,Silchar,"RLO, Ithkola Market, Ghaniwala Road",567,RIRuO,NA,95,8,19,15,12,17,2,0,Low
+Assam,Tezpur,Tezpur Office Building,536,RIRuO,NA,105,9,17,12,11,14,1,0,Low
+Assam,Tinsukia,"Digboi Carbon factory Campus, Borguri",594,RIRuO,NA,101,9,18,12,11,14,1,0,Low
+Assam,Tinsukia,"Shreepuria, Borguri",605,RIRuO,NA,100,6,15,12,11,14,1,0,Low
+Bihar,Patna,"Beltron Bhawan, Shastri Nagar",210,RIRuO,NA,83,2,51,25,11,42,13,0,Moderate
+Bihar,Patna,Gandhi Maidan Test Centre,284,RIRuO,NA,84,11,183,70,22,124,44,42,Critical
+Chandigarh,Chandigarh,"Modern Foods, Industrial Area",106,RIRuO,NA,142,5,54,20,8,35,11,0,Low
+Chandigarh,Chandigarh,Sector-17 C,263,RIRuO,NA,143,5,53,18,7,28,9,0,Low
+Chandigarh,Chandigarh,"Punjab Engineering College, Sector- 12",264,RIRuO,NA,144,5,42,14,5,24,8,0,Low
+Chandigarh,Chandigarh,"Sector-39, IMTECH",463,RIRuO,NA,143,5,42,14,5,25,8,0,Low
+Chandigarh,Chandigarh,Kaimbwala Village,464,RIRuO,NA,134,5,40,13,5,24,8,0,Low
+Chattisgarh,Bhillai,"Visak Hostel, Sector-4",65,RIRuO,NA,94,18,25,21,19,23,1,0,Moderate
+Chattisgarh,Bhillai,"R.O., 5/32 Banglow Office Building",67,RIRuO,NA,96,12,19,15,13,17,1,0,Low
+Chattisgarh,Bhillai,M.P. Laghu Udyog Nigam,245,RIRuO,NA,94,28,34,31,30,32,1,0,Moderate
+Chattisgarh,Bilaspur,"Regional Office, CECB Vyapar Vihar",669,RIRuO,NA,69,8,30,21,17,28,5,0,Moderate
+Chattisgarh,Korba,"HIG 21,22.Near Ghantaghar, MP Extension",364,RIRuO,NA,89,18,22,20,19,21,1,0,Low
+Chattisgarh,Korba,"Pragati Nagar NTPC Colony, Jamnipali",249,RIRuO,NA,94,18,22,20,19,21,1,0,Low
+Chattisgarh,Korba,"I.T.I., Rampur",407,RIRuO,NA,94,19,22,21,20,22,1,0,Moderate
+Chattisgarh,Raipur,"New HIG-9, Hirapur",368,RIRuO,NA,32,37,45,42,39,44,2,0,Null
+Chattisgarh,Raipur,"M/S Wool Worth India, Sarora",223,RIRuO,NA,41,38,50,44,41,48,3,0,Null
+Chattisgarh,Raipur,"Yatayat Thana, Jai Stambh Chowk",447,RIRuO,NA,29,35,44,40,37,42,2,0,Null
+Dadra & Nagar Haveli,Silvassa,"Khadoli Industrial Area, Khadoli",558,RIRuO,NA,97,17,25,19,18,20,1,0,Low
+Dadra & Nagar Haveli,Silvassa,"Chetan Guest House, Near Post Office",559,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Daman & Diu,Daman,"Kadaiya Industrial Area, Kadaiya",560,RIRuO,NA,111,17,49,20,18,20,3,0,Low
+Daman & Diu,Daman,"110/2, First Floor, Air Port Road, Kadaiya",561,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Delhi,Delhi,"N.Y. School, Sarojini Nagar, Delhi",144,RIRuO,NA,96,26,151,74,41,125,31,38,Critical
+Delhi,Delhi,"Town Hall, Chandni Chowk",146,RIRuO,NA,96,17,141,75,37,115,30,39,Critical
+Delhi,Delhi,"Mayapuri Industrial Area, Delhi",345,RIRuO,NA,96,19,139,70,32,113,30,34,Critical
+Delhi,Delhi,Pritampura,531,RIRuO,NA,76,31,58,41,34,51,7,0,High
+Delhi,Delhi,Shahadra,58,RIRuO,NA,75,35,70,54,43,62,8,0,High
+Delhi,Delhi,Shahzada Bagh,57,RIRuO,NA,72,34,76,56,46,69,9,0,High
+Delhi,Delhi,Nizamuddin,55,RIRuO,NA,73,22,67,47,35,58,9,0,High
+Delhi,Delhi,Janakpuri,59,RIRuO,NA,74,26,67,49,38,60,9,0,High
+Delhi,Delhi,Siri Fort,60,RIRuO,NA,74,22,78,47,34,60,11,0,High
+Delhi,Delhi,"ITO, BSZ Marg",438,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Goa,Panaji,"Old GSPCB premises, Patto",327,RIRuO,NA,93,5,48,17,10,26,7,0,Low
+Goa,Marmagao,"Fire Brigade Station, Port Trust",435,RIRuO,NA,92,5,63,19,10,31,9,0,Low
+Goa,Vasco,"Fuse Call Office, Mormugao",37,RIRuO,NA,78,6,66,18,10,29,10,0,Low
+Goa,Curchorem,"Curchorem, Sanvordem, Quepem",628,RIRuO,NA,102,10,34,16,12,20,4,0,Low
+Goa,Codli,"Codli Tisk, Ponda",630,RIRuO,NA,121,10,32,15,11,24,5,0,Low
+Goa,Honda,"Honda Junction, Sattari",631,ES,Sahyadri,70,10,34,19,12,26,6,0,High
+Goa,Bicholim,Bicholim Taluk,632,RIRuO,NA,94,11,32,16,12,22,5,0,Low
+Goa,Amona,"Amona, Bicholim",633,RIRuO,NA,93,10,31,16,11,24,5,0,Low
+Goa,Assanora,"Assanora Junction, Bardez Taluka",634,RIRuO,NA,96,10,24,14,10,20,4,0,Low
+Goa,Usgao,"Usgao Plae, Junction, Ponda",629,RIRuO,NA,100,6,30,15,10,23,5,0,Low
+Goa,Margao,Margao Town,NA,RIRuO,NA,5,20,24,23,21,24,2,0,Null
+Goa,Tilamol,Tilamol,NA,RIRuO,NA,20,24,27,25,24,27,1,0,Null
+Gujarat,Ahmedabad,"Naroda, G.I.D.C., Ahmadabad",101,RIRuO,NA,102,16,49,35,28,42,6,0,Moderate
+Gujarat,Ahmedabad,Cadilla Bridge Narol,102,RIRuO,NA,104,18,54,27,21,33,5,0,Moderate
+Gujarat,Ahmedabad,L.D. Engg. College,103,RIRuO,NA,102,12,28,18,15,22,3,0,Low
+Gujarat,Ahmedabad,"Shardaben Hospital, Saraspur",154,RIRuO,NA,104,15,42,23,18,27,4,0,Moderate
+Gujarat,Ahmedabad,"R.C. Technical High School, Mirzapur",155,RIRuO,NA,104,15,57,23,18,27,5,0,Moderate
+Gujarat,Ahmedabad,"Naroda, G.I.D.C.",347,RIRuO,NA,103,16,58,24,19,29,6,0,Moderate
+Gujarat,Anklesvar,Rallis India Ltd.,252,RIRuO,NA,104,20,94,28,22,31,9,1,Moderate
+Gujarat,Anklesvar,"Durga Traders, Bhavanafarm Society",253,RIRuO,NA,104,12,31,23,19,27,3,0,Moderate
+Gujarat,Jamnagar,Fisheries Office,319,RIRuO,NA,104,18,35,25,21,29,3,0,Moderate
+Gujarat,Rajkot,Nr. Sardhara Industrial Corporation,257,RIRuO,NA,104,12,47,20,17,22,3,0,Low
+Gujarat,Rajkot,GPCB Regional Offce,374,RIRuO,NA,104,12,24,16,14,18,2,0,Low
+Gujarat,Surat,S.V.R. Engg. College,21,RIRuO,NA,104,16,67,24,18,27,6,0,Moderate
+Gujarat,Surat,"B.R.C. High School, Udhna",22,RIRuO,NA,104,21,38,29,25,34,4,0,Moderate
+Gujarat,Surat,Near Air India Office,23,RIRuO,NA,104,19,65,26,20,29,6,0,Moderate
+Gujarat,Vadodara,"GPCB Office, Geri Vasahat",50,RIRuO,NA,93,11,27,15,12,19,3,0,Low
+Gujarat,Vadodara,Dandia Bazaar,333,RIRuO,NA,93,22,45,29,24,39,6,0,Moderate
+Gujarat,Vadodara,CETP Nandesari,334,RIRuO,NA,90,21,95,43,37,49,8,1,High
+Gujarat,Vadodara,Subhanpura,442,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Gujarat,Vapi,"GEB, IIIrd Phase, GIDC",367,RIRuO,NA,104,21,35,26,22,31,3,0,Moderate
+Gujarat,Vapi,"Vapi Nagar Palika, Vapi",221,RIRuO,NA,104,16,31,24,19,27,3,0,Moderate
+Haryana,Faridabad,Escorts Research Centre Mathura Road,331,RIRuO,NA,98,11,99,50,18,78,25,8,High
+Haryana,Faridabad,Haryana SPCB Sector-16A,330,RIRuO,NA,133,4,61,38,13,56,17,0,Moderate
+Haryana,Hissar,Urban Estate - II,390,RIRuO,NA,60,5,9,7,5,9,1,0,Low
+Haryana,Hissar,Guru Jambehswar University,414,RIRuO,NA,102,5,11,7,5,10,2,0,Low
+Haryana,Yamunanagar,Ballarpur Industries,196,RIRuO,NA,47,23,32,26,24,29,2,0,Null
+Himachal Pradesh,Baddi,Industry Department Office Building,449,RIRuO,NA,138,5,59,15,9,Null,9,0,Low
+Himachal Pradesh,Baddi,AHC barotiwala,564,RIRuO,NA,134,4,148,15,9,27,14,1,Low
+Himachal Pradesh,Baddi,Housing Board,563,RIRuO,NA,129,1,41,16,9,27,7,0,Low
+Himachal Pradesh,Damtal,Regional Office,268,RIRuO,NA,144,5,18,9,6,13,3,0,Low
+Himachal Pradesh,Damtal,Old Road,271,RIRuO,NA,129,5,17,11,7,14,3,0,Low
+Himachal Pradesh,Kala Amb,Kala Amb Industrial Area,461,RIRuO,NA,166,12,27,17,15,20,2,0,Low
+Himachal Pradesh,Kala Amb,Kala Amb Town/Trilokpur,530,RIRuO,NA,170,12,18,15,13,16,1,0,Low
+Himachal Pradesh,Nalagarh,Municipal Council,565,RIRuO,NA,126,5,27,13,8,22,5,0,Low
+Himachal Pradesh,Parwanoo,"Regional Office, Sector- 4",132,RIRuO,NA,147,1,15,7,5,11,3,0,Low
+Himachal Pradesh,Parwanoo,Asst. Commissioner Building Sector I,339,RIRuO,NA,133,4,29,10,5,14,4,0,Low
+Himachal Pradesh,Paonta Sahib,Paonta Sahib,117,RIRuO,NA,150,12,28,15,13,17,2,0,Low
+Himachal Pradesh,Paonta Sahib,Gondhpur Industrial Area,118,RIRuO,NA,123,14,23,2,16,14,18,0,Low
+Himachal Pradesh,Shimla,Tekka Bench Ridge,34,ES,Hill station,118,5,18,8,5,13,3,0,Low
+Himachal Pradesh,Shimla,"Bus Stand, Winterfield",35,ES,Hill station,111,5,30,17,11,22,4,0,Moderate
+Himachal Pradesh,Una,"Regional Office, Una",667,RIRuO,NA,13,5,60,20,6,37,15,0,Null
+Himachal Pradesh,Una,"DIC Building, Mehatpur, Una",668,RIRuO,NA,10,6,34,13,7,26,9,0,Null
+Himachal Pradesh,Sunder Nagar,"HPSPCB, BBMB Colony, Mandi",665,RIRuO,NA,244,5,17,6,5,11,3,0,Low
+Himachal Pradesh,Sunder Nagar,"Muncipal Council, NH-21, Mandi",666,RIRuO,NA,17,13,20,16,14,18,2,0,Null
+Himachal Pradesh,Manali,"Nehru Park, Manali, District Kullu",670,ES,Hill station,31,5,19,9,5,18,5,0,Null
+Himachal Pradesh,Manali,"HPSPCB, Hadimba Road, Manali, Kullu",671,ES,Hill station,10,5,17,9,5,16,5,0,Null
+Jammu & Kashmir,Jammu,"Regional Office, Jammu",184,RIRuO,NA,21,8,17,11,9,13,2,0,Null
+Jammu & Kashmir,Jammu,"M.A. Stadium, Jewel Chowk",482,RIRuO,NA,23,6,17,12,9,15,3,0,Null
+Jammu & Kashmir,Jammu,Bari Brahamana Industrial Area,507,RIRuO,NA,18,5,20,12,7,17,4,0,Null
+Jharkhand,Dhanbad,R.O. Dhanbad,44,RIRuO,NA,97,27,47,36,31,41,4,0,Moderate
+Jharkhand,Dhanbad,"EMTI, Bastacola",612,RIRuO,NA,99,27,43,34,31,38,3,0,Moderate
+Jharkhand,Dhanbad,"CGM Office, Kusunda",611,RIRuO,NA,58,21,43,34,30,38,4,0,Moderate
+Jharkhand,Jamshedpur,Bistupur Vehical Testing Centre,351,RIRuO,NA,95,37,60,47,43,52,3,0,High
+Jharkhand,Jamshedpur,Golmuri Vehicle Testing Centre,382,RIRuO,NA,83,39,64,48,44,52,3,0,High
+Jharkhand,Jharia,M.A.D.A.,332,RIRuO,NA,104,20,530,39,31,38,49,1,Moderate
+Jharkhand,Ranchi,"Albert Ekka Chowk, Main Road",402,RIRuO,NA,105,28,41,35,31,39,3,0,Moderate
+Jharkhand,Saraikela Kharsawan,"RO Building, Adityapur",614,RIRuO,NA,39,27,57,45,31,52,8,0,Null
+Jharkhand,Sindri,BIT / PDIL,46,RIRuO,NA,61,15,47,33,29,37,4,0,Moderate
+Jharkhand,West Singhbhum,Barajamda U.M. Office,615,RIRuO,NA,37,20,52,34,27,47,8,0,Null
+Karnataka,Bangalore,"Graphite India, White Field Road",77,RIRuO,NA,48,25,52,33,30,41,6,0,Null
+Karnataka,Bangalore,Yeshwanthpura police station,457,RIRuO,NA,82,21,186,34,27,39,19,1,Moderate
+Karnataka,Bangalore,Peenya Industrial Area,405,RIRuO,NA,52,13,43,29,24,33,5,0,Moderate
+Karnataka,Bangalore,"KHB Industrial Area, Yelahanka",404,RIRuO,NA,84,26,112,34,29,42,11,1,Moderate
+Karnataka,Bangalore,"AMCO Batteries, Mysore Road",78,RIRuO,NA,75,14,113,31,26,35,10,1,Moderate
+Karnataka,Bangalore,"Jnanabharathi, Bangalore University",598,RIRuO,NA,104,17,20,18,18,19,1,0,Low
+Karnataka,Bangalore,"RV College of Engineering, Mysore Road",589,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Bangalore,"TERI office, Vital Medi healthcare Pvt Ltd",NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Bangalore,Victoria hospital,406,RIRuO,NA,60,9,75,26,19,31,10,0,Moderate
+Karnataka,Belgaum,Karnataka SPCB Office Building,460,ES,Sahyadri,95,5,27,14,8,21,5,0,Low
+Karnataka,Gulburga,Government Hospital,459,RIRuO,NA,67,10,25,12,11,14,3,0,Low
+Karnataka,Hassan,KSRTC bus stand building,458,RIRuO,NA,107,15,30,24,16,28,4,0,Moderate
+Karnataka,Hubli-Dharwad,"Lakkamanahalli Industrial Area, Dharwad",432,RIRuO,NA,97,10,32,13,12,17,3,0,Low
+Karnataka,Hubli-Dharwad,"Rani Chennamma Circle, Hubli",431,RIRuO,NA,100,11,17,13,12,14,1,0,Low
+Karnataka,Mandya,"KSPCB Building, Bandigowda Badarahe",NA,RIRuO,NA,101,19,40,22,21,24,2,0,Moderate
+Karnataka,Mangalore,Baikampady Industrial Area,488,RIRuO,NA,101,5,20,8,5,16,4,0,Low
+Karnataka,Mysore,"K.R.Circle, Visvesvaraya Bldg",40,RIRuO,NA,106,20,27,22,21,25,2,0,Moderate
+Karnataka,Mysore,KSPCB Bldg. Hebbal Ind. Area,328,RIRuO,NA,108,17,27,22,20,24,2,0,Moderate
+Karnataka,Devanagere,"Mothi Theatre, Gandhi Circle, P.B. Road",674,RIRuO,NA,62,9,45,16,11,26,8,0,Low
+Karnataka,Devanagere,"HPF Intakewell, Kumarapattnam",675,RIRuO,NA,57,9,26,14,11,19,3,0,Low
+Karnataka,Devanagere,"Regional Office building, KSPCB",673,RIRuO,NA,39,6,49,16,8,29,11,0,Null
+Karnataka,Raichur,"KSPCB Office Premises, Raichur",677,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Bijapur,"KSPCB Office Premises, Bijapur",678,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Chitradurga,"KSPCB Office Premises, Chitradurga",679,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Shimaga,"The VISL, Oxygen Plant, Shimoga",680,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Karwar,Karwar Port Directors Office,681,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Bagalkote,Bagalkote KSPCB Office Premises,682,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Kolar,"KSPCB Office Premises, Kolar",683,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Karnataka,Bidar,"KSPCB Office Premises, Bidar",684,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Kerala,Alappuzha,"District Office, Alissery Road",618,RIRuO,NA,99,5,6,5,5,5,0,0,Low
+Kerala,Alappuzha,"DC Mills, Pathirappally",617,RIRuO,NA,98,5,5,5,5,5,0,0,Low
+Kerala,Kochi,"Eloor I, FACT, Ambalamughal",149,RIRuO,NA,108,5,6,5,5,6,0,0,Low
+Kerala,Kochi,Eloor II,29,RIRuO,NA,108,5,7,5,5,6,1,0,Low
+Kerala,Kochi,Irumpanam,30,RIRuO,NA,101,5,22,12,6,17,4,0,Low
+Kerala,Kochi,Ernakulum South,338,RIRuO,NA,108,5,39,17,11,23,5,0,Low
+Kerala,Kochi,VYTTILA,562,RIRuO,NA,106,5,30,15,10,23,5,0,Low
+Kerala,Kochi,MG Road Bank Ernakulum,147,RIRuO,NA,108,5,35,19,12,26,6,0,Low
+Kerala,Kochi,KALAMASSERY / CSIR Complex,346,RIRuO,NA,107,5,26,15,10,21,5,0,Low
+Kerala,Kollam,"KSPCB, District Office, Kadappakada",621,RIRuO,NA,114,10,43,23,17,31,6,0,Moderate
+Kerala,Kollam,KMML Chavara,620,RIRuO,NA,110,11,32,17,11,23,5,0,Low
+Kerala,Kottayam,Kottayam,187,RIRuO,NA,116,5,24,21,18,22,3,0,Moderate
+Kerala,Kottayam,Vadavathoor,361,RIRuO,NA,116,8,14,12,11,13,1,0,Low
+Kerala,Kozhikode,Kozhikode City,360,RIRuO,NA,116,2,22,8,5,13,3,0,Low
+Kerala,Kozhikode,Nallalam,359,RIRuO,NA,108,5,15,7,5,10,2,0,Low
+Kerala,Malapuram,"Kakkanchery, Sijmak oils",623,RIRuO,NA,97,5,10,5,5,7,1,0,Low
+Kerala,Palakkad,SEPR Refractories India Ltd.,311,RIRuO,NA,119,5,17,9,5,15,4,0,Low
+Kerala,Pathanamthitta,"KSPCB, Makkamkunnu",619,RIRuO,NA,119,5,27,13,8,18,4,0,Low
+Kerala,Thissur,"KSPCB, District Office, Poonkunnam",624,RIRuO,NA,110,5,28,14,5,22,7,0,Low
+Kerala,Wayanad,Sulthan Bathery,622,RIRuO,NA,119,5,25,12,6,18,5,0,Low
+Kerala,Thiruvananthapuram,PRS Hospital/COSMO,419,RIRuO,NA,104,15,33,22,18,29,5,0,Moderate
+Kerala,Thiruvananthapuram,SMV School,181,RIRuO,NA,104,22,52,28,25,30,3,0,Moderate
+Kerala,Thiruvananthapuram,VELI / HiTech Chackai,357,RIRuO,NA,104,15,37,18,16,20,2,0,Low
+Kerala,Thiruvananthapuram,PETTAH / Sasthamangalam,358,RIRuO,NA,104,20,30,25,22,27,2,0,Moderate
+Madhya Pradesh,Bhopal,"Hamidia Road, MP Hastshilp Vikas Nigam",122,RIRuO,NA,57,7,31,16,8,25,6,0,Low
+Madhya Pradesh,Bhopal,C E T P Govindpura,123,RIRuO,NA,58,5,57,23,10,43,14,0,Moderate
+Madhya Pradesh,Bhopal,"Nutan Subhash School, T.T. Nagar",247,RIRuO,NA,57,5,46,11,5,28,10,0,Low
+Madhya Pradesh,Bhopal,Arera Colony,36,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Madhya Pradesh,Dewas,EID Perry (I) Limited,525,RIRuO,NA,45,17,39,28,21,37,7,0,Null
+Madhya Pradesh,Dewas,Dewas Metal Section,524,RIRuO,NA,94,15,40,27,18,35,7,7,Moderate
+Madhya Pradesh,Dewas,Vikas Nagar,523,RIRuO,NA,93,13,36,24,17,33,6,0,Moderate
+Madhya Pradesh,Gwalior,Dindayal Nagar,479,RIRuO,NA,71,14,32,19,15,23,4,0,Low
+Madhya Pradesh,Gwalior,Maharaj Bada,478,RIRuO,NA,62,13,29,21,18,25,3,0,Moderate
+Madhya Pradesh,Indore,"M.P. Laghu Udyog, Pologround",127,RIRuO,NA,66,10,31,15,12,20,4,0,Low
+Madhya Pradesh,Indore,"Kothari Market, M.G. Road",128,RIRuO,NA,73,8,21,14,11,17,3,0,Low
+Madhya Pradesh,Indore,"Telephone Nagar, 26 A, Kanadia Road",131,RIRuO,NA,66,6,28,13,10,15,3,0,Low
+Madhya Pradesh,Jabalpur,Vijay Nagar,248,RIRuO,NA,91,19,54,25,22,27,4,0,Moderate
+Madhya Pradesh,Nagda,Chem. D. Labour Club,82,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Madhya Pradesh,Nagda,B C I Labour Club,84,RIRuO,NA,59,14,71,25,21,30,7,0,Moderate
+Madhya Pradesh,Nagda,Grasim Kalyan Kendra,246,RIRuO,NA,62,15,42,26,21,31,5,0,Moderate
+Madhya Pradesh,Sagar,Pt.Deendayal Nagar,532,RIRuO,NA,76,8,22,15,11,20,4,0,Low
+Madhya Pradesh,Sagar,"Katra Bazar, Sagar",533,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Madhya Pradesh,Satna,Sub-divisional Office E/M Light Machniery,343,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Madhya Pradesh,Satna,"MPPCB,Dharwari GaliNo.5,House No.318",342,RIRuO,NA,20,5,8,6,5,7,1,0,Null
+Madhya Pradesh,Singrauli,Jayant Township,515,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Madhya Pradesh,Singrauli,"N.T.P.C., Vidyanagar",514,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Madhya Pradesh,Singrauli,Waidhan,516,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Madhya Pradesh,Ujjain,District Office,527,RIRuO,NA,72,9,25,17,14,21,3,0,Low
+Madhya Pradesh,Ujjain,Regional Office,526,RIRuO,NA,76,8,23,9,8,10,2,0,Low
+Madhya Pradesh,Ujjain,Mahakal Temple,528,RIRuO,NA,2,12,23,17,13,22,8,0,Null
+Maharashtra,Dombivali/Ambernath,Dombivali MIDC Phase-II,265,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Maharashtra,Dombivali/Ambernath,Ambernath Municipal Council Office,445,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Maharashtra,Amravati,"Apurva Oil Industries, A-23, MIDC",549,RIRuO,NA,86,10,16,13,11,15,2,0,Low
+Maharashtra,Amravati,"Elect. Dept., Govt College Engineering",548,RIRuO,NA,97,10,16,13,11,14,1,0,Low
+Maharashtra,Amravati,"Rajkamal Square, Vaneeta Samaj",547,RIRuO,NA,95,10,18,14,12,17,2,0,Low
+Maharashtra,Aurangabad,S.B.E.S. College,511,RIRuO,NA,104,22,72,32,24,38,7,0,Moderate
+Maharashtra,Aurangabad,Collector Ofiice,512,RIRuO,NA,102,22,41,30,24,34,4,0,Moderate
+Maharashtra,Aurangabad,"C.A.D.A. Ofiice, Garkheda",513,RIRuO,NA,102,21,77,33,25,39,8,0,Moderate
+Maharashtra,Aurangabad,"MPCB, Chikalthana, Aurangabad",709,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Maharashtra,Badlapur,BIWA Office,649,RIRuO,NA,69,15,118,63,28,95,27,17,Critical
+Maharashtra,Chandrapur,Grampanchat Ghughus,267,RIRuO,NA,98,8,8,25,11,51,17,0,Moderate
+Maharashtra,Chandrapur,M.I.D.C. Chandrapur,281,RIRuO,NA,111,10,95,31,15,52,15,1,Moderate
+Maharashtra,Chandrapur,Nagar Parishad,396,RIRuO,NA,107,7,71,31,15,54,15,0,Moderate
+Maharashtra,Chandrapur,"Gadchandur Gram Panchayat, Rajura",640,RIRuO,NA,87,7,64,23,9,41,0,13,Moderate
+Maharashtra,Chandrapur,"MIDC, Tadali",638,RIRuO,NA,99,7,76,21,10,33,12,0,Moderate
+Maharashtra,Chandrapur,"Muncipal Council, Ballarshah",639,RIRuO,NA,78,10,66,34,19,52,13,0,Moderate
+Maharashtra,Jalgaon,B. J. Market,644,RIRuO,NA,104,23,51,42,31,48,6,0,High
+Maharashtra,Jalgaon,Girna water tank,645,RIRuO,NA,104,17,45,37,30,43,6,0,Moderate
+Maharashtra,Jalgaon,MIDC Jalgaon,646,RIRuO,NA,101,19,56,47,36,54,8,0,High
+Maharashtra,Kolhapur,"University Campus, Shivaji University",508,ES,Sahyadri,104,8,16,11,9,13,2,0,Low
+Maharashtra,Kolhapur,"Ruikar Trust, S.T. Stand",509,ES,Sahyadri,104,22,42,30,24,37,5,0,Moderate
+Maharashtra,Kolhapur,"Mahadwar Road, Near Mahalaxmi Temple",510,ES,Sahyadri,105,14,33,23,18,29,4,0,Moderate
+Maharashtra,Latur,MIDC Water Works,641,RIRuO,NA,105,9,40,16,10,24,6,0,Low
+Maharashtra,Latur,Kshewraj Vidyalaya Shyam nagar,642,RIRuO,NA,103,8,31,14,9,20,5,0,Low
+Maharashtra,Latur,Sidhheshwar Sahakari Bank Ganjgolai,643,RIRuO,NA,101,9,37,17,10,26,7,0,Low
+Maharashtra,Lote,MIDC Chalkewadi,489,RIRuO,NA,53,9,76,31,15,47,15,0,Moderate
+Maharashtra,Lote,"Pump House, CETP",490,RIRuO,NA,55,9,70,32,14,58,17,0,Moderate
+Maharashtra,Mahad,"Water treatment plant, Bhirwadi",569,RIRuO,NA,81,27,47,36,29,43,5,0,Moderate
+Maharashtra,Mahad,"EHS, building of M/s Privi organics",570,RIRuO,NA,71,27,54,41,32,48,6,0,High
+Maharashtra,Mahad,"Mahatma Phule Hall, Mahad Nagar Parisha",571,RIRuO,NA,78,26,48,38,29,45,6,0,Moderate
+Maharashtra,Mumbai,"Bank of India, Kalbadevi Branch, Kalbadevi",169,RIRuO,NA,94,5,189,35,8,62,29,4,Moderate
+Maharashtra,Mumbai,"Parel TT, Ambedkar Road",170,RIRuO,NA,95,5,67,29,9,52,17,0,Moderate
+Maharashtra,Mumbai,Worli,349,RIRuO,NA,86,5,170,39,7,73,28,3,Moderate
+Maharashtra,Nagpur,Institution of Engineers,287,RIRuO,NA,100,19,130,40,24,60,19,4,Moderate
+Maharashtra,Nagpur,"Govt. Polytechnic College, Sadar",314,RIRuO,NA,102,20,78,38,27,55,12,0,Moderate
+Maharashtra,Nagpur,MIDC Office Hingana Road,288,RIRuO,NA,93,20,80,40,27,59,13,1,Moderate
+Maharashtra,Nagpur,"MIDC Industrial Area, MIDC Office, Hingna",165,RIRuO,NA,97,5,98,28,11,56,18,1,Moderate
+Maharashtra,Nagpur,"Nagpur Coop Building, Maskasath, Itwari",166,RIRuO,NA,96,5,84,36,16,68,20,3,Moderate
+Maharashtra,Nagpur,"NEERI Lab, Nehru Marg, Highway No. 7",167,RIRuO,NA,99,5,75,24,8,46,16,0,Moderate
+Maharashtra,Nashik,R.T.O. Colony Tank,259,RIRuO,NA,104,19,33,27,23,31,3,0,Moderate
+Maharashtra,Nashik,"VIP Industrial Area, MIDC Satpura",269,RIRuO,NA,104,22,36,28,24,32,3,0,Moderate
+Maharashtra,Nashik,Nashik Municipal Council Building,280,RIRuO,NA,103,21,33,27,23,31,3,0,Moderate
+Maharashtra,Nashik,"MPCB Sub R.O. Udyog Bhawan, Nashik",710,RIRuO,NA,53,23,31,27,24,30,2,0,Moderate
+Maharashtra,Navi Mumbai,"T.B.I.A, Rabale Airoli, TTC",491,RIRuO,NA,109,23,64,45,33,56,9,0,High
+Maharashtra,Navi Mumbai,"Dr. D.Y. Patil College, Nerul, TTC",492,RIRuO,NA,101,21,66,42,30,53,9,0,High
+Maharashtra,Navi Mumbai,"MPCB Lab, Mhape, TTC",493,RIRuO,NA,72,22,64,44,32,55,9,0,High
+Maharashtra,Navi Mumbai,CIDCO Nodal Office Kharghar,494,RIRuO,NA,102,25,68,42,32,52,8,0,High
+Maharashtra,Navi Mumbai,"Water Pump House, Panvel, Taloja",495,RIRuO,NA,99,22,61,41,30,52,9,0,High
+Maharashtra,Navi Mumbai,"MIDC Collom Facility Building, Taloja",496,RIRuO,NA,106,28,84,51,38,64,10,1,High
+Maharashtra,Pune,"Maratha Chamber of commerce, Bhosari",312,RIRuO,NA,104,17,85,50,31,71,15,3,High
+Maharashtra,Pune,State Electricity Board BLDG Nalstop,379,RIRuO,NA,102,23,119,62,39,83,18,17,Critical
+Maharashtra,Pune,Swargate Police Chawki,381,RIRuO,NA,101,13,138,70,39,107,26,35,Critical
+Maharashtra,Pune,"Bank of Baroda Builing, Near Pimpri-Chinchwad M.C Builiding",708,RIRuO,NA,103,18,88,49,24,75,19,6,High
+Maharashtra,Roha,Roha Industrial Association office,572,RIRuO,NA,82,15,49,34,23,43,8,0,Moderate
+Maharashtra,Roha,Filter House of MIDC Water works,573,RIRuO,NA,55,16,46,35,7,25,43,0,Moderate
+Maharashtra,Sangli,"Udyog bhavan / SRO, MPCB Sangli",574,RIRuO,NA,104,16,76,34,20,58,15,0,Moderate
+Maharashtra,Sangli,Sangli- Miraj Primary school Building,575,RIRuO,NA,104,14,74,38,20,64,17,0,Moderate
+Maharashtra,Sangli,Krishna Valley School,576,RIRuO,NA,105,18,65,32,21,47,11,0,Moderate
+Maharashtra,Solapur,WIT Campus,299,RIRuO,NA,105,31,40,35,33,37,2,0,Moderate
+Maharashtra,Solapur,Voronoko School / Chitale Clinic,300,RIRuO,NA,103,31,44,35,33,37,2,0,Moderate
+Maharashtra,Tarapur,"Plot No. AM-31, MIDC Office Compound",497,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Maharashtra,Tarapur,"Police Chowki, Plot No. AM-08",498,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Maharashtra,Tarapur,"Sports Stadium, Plot No.l -34",499,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Maharashtra,Thane,"Maternity Hospital, Dhobighat, Thane East",303,RIRuO,NA,51,10,19,13,11,14,2,0,Low
+Maharashtra,Thane,"Shahu Market,Naupada, Thane West",304,RIRuO,NA,54,11,19,14,12,15,2,0,Low
+Maharashtra,Thane,"Kolshet and Balkum, Thane West",305,RIRuO,NA,30,11,17,13,12,14,1,0,Null
+Maharashtra,Ulhasnagar,Smt. C. H. M. College Campus,647,RIRuO,NA,101,11,100,62,33,83,19,19,Critical
+Maharashtra,Ulhasnagar,Octroi Naka,648,RIRuO,NA,102,19,118,73,40,100,24,48,Critical
+Maharashtra,Jalna,"Bachat Bhawan, Near S P Office",706,RIRuO,NA,79,16,37,24,19,29,4,0,Moderate
+Maharashtra,Jalna,"Krishidhan Seeds Ltd, MIDC Area",707,RIRuO,NA,78,14,39,26,21,30,4,0,Moderate
+Maharashtra,Akola,"LRT Commerce College, Civil Lines, Akola",700,RIRuO,NA,71,6,12,9,8,10,1,0,Low
+Maharashtra,Akola,"MIDC Water Work, Phash-II, MIDC Akola",701,RIRuO,NA,69,6,16,11,9,14,2,0,Low
+Maharashtra,Akola,"College Of Engineering & Tech, Akola",702,RIRuO,NA,72,7,14,11,9,13,1,0,Low
+Maharashtra,Nanded,Ganesh Nagar,703,RIRuO,NA,69,5,43,18,9,41,10,0,Low
+Maharashtra,Nanded,"Mutha Chowk, Vazirabad",704,RIRuO,NA,70,2,67,25,9,59,16,0,Moderate
+Maharashtra,Nanded,"Industrial Area, MIDC, CIDCO",705,RIRuO,NA,70,2,103,43,9,103,32,8,High
+Manipur,Imphal,Secretariat Building,556,ES,Hill station,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Meghalaya,Byrnihat,"EPIP, Ri-Bhoi district",568,RIRuO,NA,99,5,34,17,11,24,5,0,Low
+Meghalaya,Dawki,"Terrace building,Jaintia Hills District",588,RIRuO,NA,97,4,16,7,5,11,3,0,Low
+Meghalaya,Tura,"PHED, Araimille, West Garo Hills District",608,RIRuO,NA,118,5,14,7,5,10,2,0,Low
+Meghalaya,Shillong,State Tuberculosis Hospital,340,ES,Hill station,98,5,34,15,7,21,6,0,Low
+Meghalaya,Shillong,"Boards Office Permises, Lumpyngngad",120,ES,Hill station,96,5,13,5,5,6,1,0,Low
+Mizoram,Aizawl,"Khatla, M.G-Road, Mizoram SPCB",450,ES,Hill station,93,5,8,6,5,7,1,0,Low
+Mizoram,Aizawl,Laipuitlang,451,ES,Hill station,96,5,8,5,5,5,1,0,Low
+Mizoram,Aizawl,Bawngkawn,452,ES,Hill station,96,5,9,6,5,8,1,0,Low
+Mizoram,Aizawl,"Dawrpui Y.M.A, Building, Dawrpui",737,ES,Hill station,1,5,5,5,5,5,Null,0,Null
+Mizoram,Aizawl,"Lengpui Airport, Model Veng, Lengpui",738,ES,Hill station,1,5,5,5,5,5,Null,0,Null
+Mizoram,Lunglei,"Thangkhuma Building, Salem Veng",735,ES,Hill station,3,5,5,5,5,5,0,0,Null
+Mizoram,Lunglei,"K.Lalliantluanga, Chanmari I, Lunglei",736,ES,Hill station,4,5,5,5,5,5,0,0,Null
+Mizoram,Kolasib,"H. Lalthuama Building, Project Veng",733,ES,Hill station,3,5,6,5,5,5,1,0,Null
+Mizoram,Kolasib,"Synod Bookroom, Building Diakkawn",734,ES,Hill station,3,5,5,5,5,5,1,0,Null
+Mizoram,Champhai,"D.T.O Office Building, Kahrawt veng",731,ES,Hill station,3,5,5,5,5,5,0,0,Null
+Mizoram,Champhai,"Lalzidinga building, Vengthlang",732,ES,Hill station,1,6,6,6,6,6,Null,0,Null
+Nagaland,Dimapur,Bank Colony,317,RIRuO,NA,104,5,22,6,5,8,3,0,Low
+Nagaland,Dimapur,Dhobinala,448,RIRuO,NA,105,5,34,8,5,11,4,0,Low
+Nagaland,Kohima,Opposite NST Office,609,ES,Hill station,104,5,11,5,5,5,1,0,Low
+Nagaland,Kohima,Opposite War Cemetery,610,ES,Hill station,103,5,7,5,5,6,1,0,Low
+Orissa,Angul,Industrial Estate,70,RIRuO,NA,101,12,26,20,17,24,3,0,Low
+Orissa,Angul,NALCO Township,231,RIRuO,NA,68,13,23,19,15,22,3,0,Low
+Orissa,Balasore,Sahadevkhunta,428,RIRuO,NA,103,9,14,12,11,13,1,0,Low
+Orissa,Berhampur,Regional Office Orissa SPCB,429,RIRuO,NA,101,11,38,15,12,19,3,0,Low
+Orissa,Bhubneshwar,Capital Police Station,424,RIRuO,NA,101,5,38,18,9,27,7,0,Low
+Orissa,Bhubneshwar,IRC Village,423,RIRuO,NA,104,5,33,15,8,21,6,0,Low
+Orissa,Bhubneshwar,SPCB Building,322,RIRuO,NA,99,5,41,16,10,22,7,0,Low
+Orissa,Bhubneshwar,"Water works, Palasuni, Rasalgarh",687,RIRuO,NA,17,29,104,41,30,45,17,6,Null
+Orissa,Bhubneshwar,"Patrapara, Khandagiri",686,RIRuO,NA,17,13,37,26,18,35,7,0,Null
+Orissa,Bhubneshwar,Chandrashekharpur,688,RIRuO,NA,8,22,40,31,22,37,7,0,Null
+Orissa,Cuttack,"Roof of Traffic Tower, Badambadi",426,RIRuO,NA,115,7,41,20,12,37,8,0,Low
+Orissa,Cuttack,"R.O. Cuttack Office, Surya Vihar",425,RIRuO,NA,58,7,26,15,10,20,4,0,Low
+Orissa,Rayagada,Regional Office Orissa SPCB,428,RIRuO,NA,108,9,51,22,17,24,4,0,Moderate
+Orissa,Rayagada,"LPS High School, Jaykaypur",229,RIRuO,NA,104,17,27,22,19,25,2,0,Moderate
+Orissa,Rourkela,"Regional Office, ORPB",370,RIRuO,NA,96,10,24,10,10,11,1,0,Low
+Orissa,Rourkela,"IDL Police Out-post, Sonaparbat",227,RIRuO,NA,92,10,12,11,10,11,0,0,Low
+Orissa,Sambalpur,"Filter Plant, PHD Office, Modipara",427,RIRuO,NA,109,9,20,14,12,16,2,0,Low
+Orissa,Talcher,Coal Field Area,471,RIRuO,NA,2,20,21,21,20,21,1,0,Null
+Orissa,Talcher,T.T.P.S.Colony,68,RIRuO,NA,103,12,26,19,16,22,2,0,Low
+Punjab,Amritsar,R.O. Focal Point,487,RIRuO,NA,62,29,48,37,34,40,3,0,Moderate
+Punjab,Amritsar,"A-1,Platers",486,RIRuO,NA,96,23,44,36,32,40,3,0,Moderate
+Punjab,Bhatinda,"Bathinda Milk Producers, Dabwali Road",506,RIRuO,NA,95,13,38,22,15,30,6,0,Moderate
+Punjab,Dera Bassi,"Punjab Chem and Crop Protection, Bhanakarpur Rd",504,RIRuO,NA,102,15,39,23,17,30,6,0,Moderate
+Punjab,Dera Bassi,"Winsome Yarns Ltd., Barwala Road",505,RIRuO,NA,130,13,37,21,16,28,5,0,Moderate
+Punjab,Pathankot/Dera Baba,C-PYTE Building,590,RIRuO,NA,111,12,36,14,13,15,2,0,Low
+Punjab,Gobindgarh,"Modi Oil and General Mills, Mandi",302,RIRuO,NA,125,24,86,27,35,6,32,1,Moderate
+Punjab,Gobindgarh,"Raj Steel Rolling Mills, Mandi",301,RIRuO,NA,112,22,94,33,28,36,7,1,Moderate
+Punjab,Gobindgarh,"United Rolling Mills, Mandi Gobindgarh",483,RIRuO,NA,120,9,40,28,36,32,4,0,Moderate
+Punjab,Jalandhar,Municipal Council Tubewell No. 27,353,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Punjab,Jalandhar,Regional Office,176,RIRuO,NA,40,20,27,23,21,26,2,0,Null
+Punjab,Jalandhar,"Punjab Maltex , Kapurthala Road",355,RIRuO,NA,21,21,29,25,22,28,2,0,Null
+Punjab,Jalandhar,Focal Point,392,RIRuO,NA,7,24,31,28,26,30,3,0,Null
+Punjab,Khanna,"Markfed Vanaspati, Khanna",485,RIRuO,NA,121,26,44,31,29,34,3,0,Moderate
+Punjab,Khanna,"AS School, Khanna",484,RIRuO,NA,129,22,39,30,27,33,3,0,Moderate
+Punjab,Ludhiana,Bharat Nagar Chowk,422,RIRuO,NA,113,19,34,29,26,31,3,0,Moderate
+Punjab,Ludhiana,"Nahar Spining Mlls, Dholewal Chawk",76,RIRuO,NA,107,21,91,30,25,34,7,1,Moderate
+Punjab,Ludhiana,"Ludhiana Coop. Milk Producer, Ferozpur Rd",61,RIRuO,NA,148,16,41,26,21,33,5,0,Moderate
+Punjab,Ludhiana,"PPCB Office Building, Vishavkarma Chowk",335,RIRuO,NA,131,21,60,29,24,34,5,0,Moderate
+Punjab,Naya Nangal,Punjab Alkalis & Chemicals Ltd,420,RIRuO,NA,119,12,27,17,13,22,3,0,Low
+Punjab,Naya Nangal,"M/s NFL Guest House,Naya Nangal",421,RIRuO,NA,83,12,29,17,13,22,4,0,Low
+Punjab,Patiala,"Ceylon Industries, Factory Area, Patiala",600,RIRuO,NA,101,10,32,20,16,27,5,0,Low
+Punjab,Patiala,"Fire Brigade Station, Bahera Road, Patiala",599,RIRuO,NA,114,11,53,18,14,21,6,0,Low
+Punjab,Batala,NA,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Puducherry,Puducherry,"DSTC Office Upstairs, AnnaNagar",64,RIRuO,NA,82,11,19,16,14,18,1,0,Low
+Puducherry,Puducherry,PIPDIC Ind. Estate Mettupalayam,93,RIRuO,NA,70,15,19,17,15,18,1,0,Low
+Puducherry,Puducherry,Chamber Of Commerce,337,RIRuO,NA,72,10,17,14,12,16,1,0,Low
+Rajasthan,Alwar,Rajasthan State Pollution Control Board,372,ES,Aravali range,69,10,48,22,14,29,7,0,Moderate
+Rajasthan,Alwar,Gaurav Solvex Ltd. MIA,373,ES,Aravali range,69,14,35,22,16,29,5,0,Moderate
+Rajasthan,Alwar,"RIICO Pump House, MIA",219,ES,Aravali range,69,9,76,22,15,31,9,0,Moderate
+Rajasthan,Jaipur,Ajmeri Gate,296,RIRuO,NA,107,26,3607,71,32,50,345,1,Critical
+Rajasthan,Jaipur,"RJPB Office,Jhalana Doongari",298,RIRuO,NA,100,27,56,35,31,42,6,0,Moderate
+Rajasthan,Jaipur,"District Education Officer, Chandpole",408,RIRuO,NA,103,25,83,39,31,54,10,1,Moderate
+Rajasthan,Jaipur,"RIICO Office, M.I.A.",410,RIRuO,NA,98,25,54,34,30,43,6,0,Moderate
+Rajasthan,Jaipur,"RSPCB, Vidyadhar Nagar",409,RIRuO,NA,102,14,85,38,30,58,12,1,Moderate
+Rajasthan,Jaipur,VKIA,297,RIRuO,NA,93,22,55,36,30,42,5,0,Moderate
+Rajasthan,Jodhpur,"DIC Office, Industrial Estate",413,RIRuO,NA,98,17,43,23,19,27,27,0,Moderate
+Rajasthan,Jodhpur,Sojati Gate,273,RIRuO,NA,102,14,39,24,19,28,28,0,Moderate
+Rajasthan,Jodhpur,"Basni Industrial Area, RIICO Office",274,RIRuO,NA,96,15,31,23,19,27,27,0,Moderate
+Rajasthan,Jodhpur,Maha Mandir Police Thane,376,RIRuO,NA,99,13,32,22,19,27,27,0,Moderate
+Rajasthan,Jodhpur,"Office of Housing Board, Chopasani Road",411,RIRuO,NA,101,11,29,22,19,27,27,0,Moderate
+Rajasthan,Jodhpur,Shastri Nagar Police Thana,412,RIRuO,NA,100,14,35,24,19,29,29,0,Moderate
+Rajasthan,Kota,"Regional Office, RJPB, Anantpura",17,RIRuO,NA,90,15,58,33,20,50,50,0,Moderate
+Rajasthan,Kota,Municipal Corporation Building,326,RIRuO,NA,89,12,62,30,18,43,43,0,Moderate
+Rajasthan,Kota,Samcore Glass Ltd.,325,RIRuO,NA,89,13,59,28,16,41,41,0,Moderate
+Rajasthan,Udaipur,Ambamata,320,RIRuO,NA,103,18,38,24,20,30,30,0,Moderate
+Rajasthan,Udaipur,Town Hall,294,RIRuO,NA,100,27,40,36,34,38,38,0,Moderate
+Rajasthan,Udaipur,"Regional Office,MIA",321,RIRuO,NA,103,29,42,37,34,39,39,0,Moderate
+Sikkim,Gangtok,White Hall Complex,521,ES,Hill station,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Sikkim,Gangtok,"Metro Point, Hospital Complex",522,ES,Hill station,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Chennai,"Kathivakkam, Municipal Kalyana Mandapam",38,RIRuO,NA,100,10,62,26,15,36,10,0,Moderate
+Tamilnadu,Chennai,"Govt. High School, Manali",71,RIRuO,NA,95,12,68,25,13,38,12,0,Moderate
+Tamilnadu,Chennai,Thiruvottiyur,72,RIRuO,NA,96,12,62,26,13,39,11,0,Moderate
+Tamilnadu,Chennai,Madras Medical College,159,RIRuO,NA,91,5,37,12,5,20,7,0,Low
+Tamilnadu,Chennai,"NEERI, CSIR CampusTaramani",160,RIRuO,NA,94,5,30,12,5,22,7,0,Low
+Tamilnadu,Chennai,Thiruvottiyur Municipal Office,161,RIRuO,NA,93,5,32,12,5,19,6,0,Low
+Tamilnadu,Chennai,Adiyar,437,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Chennai,Kilpauk,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Chennai,Thiyagaraya Nagar,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Chennai,Vallar Nagar,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Chennai,Anna Nagar,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Coimbatore,"Poniarajapuram, On the top of DEL",375,RIRuO,NA,96,13,588,36,17,54,59,1,Moderate
+Tamilnadu,Coimbatore,G.D.Matric Hr.Sec.School,238,RIRuO,NA,92,12,83,29,18,51,14,1,Moderate
+Tamilnadu,Coimbatore,"SIDCO Office, Coimbatore/ Kurichi",237,RIRuO,NA,101,9,111,35,19,57,19,4,Moderate
+Tamilnadu,Madurai,Highway (Project -I) Building,306,RIRuO,NA,96,16,28,24,21,26,2,0,Moderate
+Tamilnadu,Madurai,Fenner (I) Ltd. Kochadai,307,RIRuO,NA,96,17,29,24,21,26,2,0,Moderate
+Tamilnadu,Madurai,Kunnathur Chatram Avvai Girls HS School,308,RIRuO,NA,102,16,38,24,21,26,3,0,Moderate
+Tamilnadu,Salem,Sowdeswari College Building,309,RIRuO,NA,144,13,46,21,17,26,4,0,Moderate
+Tamilnadu,Tuticorin,"Fisheries College, Tuticorin Sipcot",239,RIRuO,NA,95,7,34,15,10,24,6,0,Low
+Tamilnadu,Tuticorin,Raja Agencies,240,RIRuO,NA,95,9,57,15,9,22,8,0,Low
+Tamilnadu,Tuticorin,AVM Jewellery Building,366,RIRuO,NA,101,8,46,14,9,21,7,0,Low
+Tamilnadu,Trichy,Gandhi Market,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Trichy,Main Guard Gate,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Trichy,Bishop Heber College,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Trichy,Golden Rock,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Tamilnadu,Trichy,Central Bus Stand,NA,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+Uttar Pradesh,Agra,"Regional Office, Bodla",323,ES,Taj-trapezium,91,10,19,14,10,17,3,0,Low
+Uttar Pradesh,Agra,Nunhai,324,ES,Taj-trapezium,93,11,27,18,13,23,4,0,Moderate
+Uttar Pradesh,Agra,Taj Mahal,1,ES,Taj-trapezium,261,5,61,18,6,33,11,0,Moderate
+Uttar Pradesh,Agra,DIC Nunhai,415,ES,Taj-trapezium,115,7,68,32,18,51,13,0,High
+Uttar Pradesh,Agra,Etmad-uddaulah,416,ES,Taj-trapezium,117,6,61,24,10,42,13,0,Moderate
+Uttar Pradesh,Agra,Rambagh,417,ES,Taj-trapezium,122,5,58,24,11,40,11,0,Moderate
+Uttar Pradesh,Allahabad,Square crossing circle of Laxmi Talkies,554,RIRuO,NA,42,11,47,26,17,40,8,0,Null
+Uttar Pradesh,Allahabad,Bharat Yantra Nigam Ltd,555,RIRuO,NA,104,8,38,20,12,29,6,0,Low
+Uttar Pradesh,Anpara,"Anpara Colony, Sonabhadra",6,RIRuO,NA,103,18,77,26,23,29,6,0,Moderate
+Uttar Pradesh,Anpara,"Renusagar Colony, Sonabhadra",7,RIRuO,NA,103,18,56,26,22,29,4,0,Moderate
+Uttar Pradesh,Bareily,IVRI Izatnaga,714,RIRuO,NA,83,15,285,51,17,218,79,11,High
+Uttar Pradesh,Bareily,"Indian oetrol pump, Civil Line",715,RIRuO,NA,84,19,386,61,20,37,102,10,Critical
+Uttar Pradesh,Firozabad,Center for Development of Glass Industry,399,ES,Taj-trapezium,50,35,83,45,37,64,11,2,High
+Uttar Pradesh,Firozabad,Tilak Nagar,400,ES,Taj-trapezium,52,25,43,37,32,42,4,0,High
+Uttar Pradesh,Firozabad,Raza ka Tal,401,ES,Taj-trapezium,53,30,46,37,33,41,3,0,High
+Uttar Pradesh,Gajraula,"Raunaq Auto Ltd, J.P. Nagar",140,RIRuO,NA,49,18,26,23,21,25,2,0,Null
+Uttar Pradesh,Gajraula,"Indira Chowk, J.P. Nagar",139,RIRuO,NA,6,19,23,21,20,23,2,0,Null
+Uttar Pradesh,Ghaziabad,"Atlas Cycles Industries, Sahibabad Ind. area",258,RIRuO,NA,95,34,44,40,37,42,2,0,Moderate
+Uttar Pradesh,Ghaziabad,Bulandshaar Road Industrial Area,369,RIRuO,NA,91,29,52,38,34,40,3,0,Moderate
+Uttar Pradesh,Jhansi,Jail Chauraha,517,RIRuO,NA,120,18,31,25,20,29,4,0,Moderate
+Uttar Pradesh,Jhansi,Veeranga Nagar,518,RIRuO,NA,120,17,30,22,18,27,4,0,Moderate
+Uttar Pradesh,Kanpur,"Forest & Training Centre, Kidwai Nagar",212,RIRuO,NA,59,23,47,38,30,46,6,0,Moderate
+Uttar Pradesh,Kanpur,Chamber Of Commerce Darshanpurwa,98,RIRuO,NA,55,21,51,35,26,43,6,0,Moderate
+Uttar Pradesh,Kanpur,"Associated Chem Pvt Ltd, Fazalganj, Panki, Site-5",86,RIRuO,NA,38,28,49,41,37,48,5,0,Null
+Uttar Pradesh,Kanpur,Dabauli / Shastri NGR,391,RIRuO,NA,28,24,43,35,28,40,5,0,Null
+Uttar Pradesh,Kanpur,Jajmau / Awas Vikas,395,RIRuO,NA,55,20,50,36,28,45,7,0,Moderate
+Uttar Pradesh,Kanpur,"Vikas Nagar, Kanpur",439,RIRuO,NA,225,3,101,33,11,66,22,3,Moderate
+Uttar Pradesh,Kanpur,"I.I.T. Campus, Kanpur",721,RIRuO,NA,71,5,36,13,5,20,6,0,Low
+Uttar Pradesh,Kanpur,"Dada Nagar, Kanpur",722,RIRuO,NA,83,8,82,35,20,56,14,1,Moderate
+Uttar Pradesh,Kanpur,"Ramadevi, Kanpur",723,RIRuO,NA,62,10,78,29,17,55,14,0,Moderate
+Uttar Pradesh,Khurja,Central Glass & Ceramic Research Institute,534,RIRuO,NA,96,22,35,30,26,33,3,0,Moderate
+Uttar Pradesh,Khurja,Ahirpara,535,RIRuO,NA,73,20,30,26,22,29,3,0,Moderate
+Uttar Pradesh,Lucknow,Mahanagar,377,RIRuO,NA,104,27,39,32,30,35,2,0,Moderate
+Uttar Pradesh,Lucknow,"Chandganj Garden, Aliganj",398,RIRuO,NA,107,28,36,32,30,35,2,0,Moderate
+Uttar Pradesh,Lucknow,"Kapoor Hotel, Hazratganj",109,RIRuO,NA,103,28,93,33,30,34,8,2,Moderate
+Uttar Pradesh,Lucknow,Talkatora,113,RIRuO,NA,105,27,39,34,32,36,2,0,Moderate
+Uttar Pradesh,Lucknow,Aminabad / S.M.K Chowk,397,RIRuO,NA,107,26,100,33,30,35,7,1,Moderate
+Uttar Pradesh,Meerut,Begum Bridge,550,RIRuO,NA,71,35,61,48,40,56,7,0,High
+Uttar Pradesh,Meerut,Thana Railway Road / Kesarganj,551,RIRuO,NA,66,36,51,41,37,46,3,0,High
+Uttar Pradesh,Muradabad,"Hindu College, Station Road",712,RIRuO,NA,102,14,48,26,17,38,7,0,Moderate
+Uttar Pradesh,Muradabad,"Central Police Hospital, Civil Lines",713,RIRuO,NA,98,11,34,20,13,30,6,0,Low
+Uttar Pradesh,Noida,"UP PPCB, E-12/1, Sector - 1",403,RIRuO,NA,96,27,59,44,33,56,8,0,High
+Uttar Pradesh,Noida,Gee-Pee Electroplating and Eng. Work,378,RIRuO,NA,96,29,59,45,35,54,7,0,High
+Uttar Pradesh,Varanasi,"Regional Office, Jawahar Nagar",362,RIRuO,NA,88,18,23,20,19,21,1,0,Low
+Uttar Pradesh,Varanasi,Sigra,553,RIRuO,NA,84,18,23,20,19,21,1,0,Low
+Uttar Pradesh,Unnao,"H. No. 5, Krishna Nagar, Unnao",726,RIRuO,NA,12,29,36,33,30,35,2,0,Null
+Uttar Pradesh,Unnao,"IIA Building, Industrial Area, Site 10, Unnao",727,RIRuO,NA,14,33,37,35,33,35,1,0,Null
+Uttar Pradesh,Saharanpur,"SRE-A, IIT Roorkee, Saharanpur Campus",716,RIRuO,NA,28,16,24,20,18,22,2,0,Null
+Uttar Pradesh,Saharanpur,"UPCL S.E. Office, Near Clock Tower",717,RIRuO,NA,28,18,24,20,18,24,2,0,Null
+Uttar Pradesh,Raebareli,"Town Hall Colony, Ahmad Nagar, Gulab Road",718,RIRuO,NA,71,5,19,10,7,16,3,0,Low
+Uttar Pradesh,Raebareli,Khoya mandi Tiraha Lucknow Road Raebareli,719,RIRuO,NA,57,7,23,13,9,20,4,0,Low
+Uttar Pradesh,Raebareli,Amawan Road Ind. Area Raebareli,720,RIRuO,NA,49,8,16,11,8,14,3,0,Null
+Uttar Pradesh,Mathura,"RO. UPPCB, 65 Baldevpuri, Maholi Road",724,RIRuO,NA,14,14,25,21,16,25,4,0,Null
+Uttar Pradesh,Mathura,"CETP, Industrial Area, Mathura",725,RIRuO,NA,16,21,34,27,23,30,3,0,Null
+Uttar Pradesh,Gorakpur,"M. M.M. Engineering College, Gorakhpur",728,RIRuO,NA,36,25,41,34,29,39,4,0,Null
+Uttar Pradesh,Gorakpur,"India Glycol Ltd. Gida, Gorakhpur",729,RIRuO,NA,36,34,61,49,35,58,8,0,Null
+Uttar Pradesh,Gorakpur,"Jalkal, Muncipal Corporation, Golghar",730,RIRuO,NA,19,41,46,44,42,46,1,0,Null
+Uttarakhand,Dehradun,"Raipur Road, Near parag Diary",90,ES,Doon valley,31,20,31,24,21,27,2,0,Null
+Uttarakhand,Dehradun,"Clock Tower, PWD Guest House",89,ES,Doon valley,29,21,29,25,21,28,2,0,Null
+Uttarakhand,Dehradun,Himalaya Drug Co. Near ISBT,637,ES,Doon valley,33,19,29,23,20,26,2,0,Null
+Uttarakhand,Haldwani,Govt. Women Hospital,625,RIRuO,NA,10,21,28,24,21,27,3,0,Null
+Uttarakhand,Haridwar,"SIDCUL, Haridwar",635,RIRuO,NA,42,20,30,24,20,29,3,0,Null
+Uttarakhand,Kashipur,"BSNL Office, Kashipur",627,RIRuO,NA,12,28,30,29,28,30,1,0,Null
+Uttarakhand,Rishikesh,Nagar Palika Parishad,636,ES,Hill station,32,16,25,22,18,24,2,0,Null
+Uttarakhand,Rudrapur,SIDCUL Office,626,RIRuO,NA,5,20,21,20,20,21,1,0,Null
+West Bengal,Asansol,Asansol Municipal Corporation,386,RIRuO,NA,96,39,86,60,50,71,9,0,High
+West Bengal,Asansol,"Kangsabati Spinning Mill, Barjora",593,RIRuO,NA,96,38,69,55,46,66,8,0,High
+West Bengal,Asansol,"Burnpur Town Department, Burnpur",592,RIRuO,NA,104,34,66,51,42,61,8,0,High
+West Bengal,Barrackpore,Barrackpore Municiaplity,655,RIRuO,NA,104,10,94,41,16,80,26,11,High
+West Bengal,Barrackpore,Dum Dum Telephone Exchange,653,RIRuO,NA,104,14,103,47,18,85,27,14,High
+West Bengal,Barrackpore,Khardah Municipality,654,RIRuO,NA,104,14,107,49,20,85,28,17,High
+West Bengal,Durgapur,"DMC Water Works, Angadpur",591,RIRuO,NA,43,37,66,53,43,62,7,0,Null
+West Bengal,Durgapur,"Kwality Hotel, Bhiringi More, Benachiti",384,RIRuO,NA,43,44,75,60,50,71,7,0,Null
+West Bengal,Durgapur,"Bidhannagar, PCBL Club, Muchipara",385,RIRuO,NA,43,35,61,46,39,56,7,0,Null
+West Bengal,Durgapur,"Dew India Limited, PCBL More, Durgapur",383,RIRuO,NA,43,53,86,69,59,79,8,0,Null
+West Bengal,Haldia,"Bhabanipur, Milan Viyapith, Bhabanipur",663,RIRuO,NA,104,42,65,55,48,62,5,0,High
+West Bengal,Haldia,"Bhunia Raichak, Driver's Hut , Bhunia",664,RIRuO,NA,104,43,70,55,47,62,6,0,High
+West Bengal,Haldia,"Supermarket Building, Durgachak",15,RIRuO,NA,104,38,69,53,47,59,5,0,High
+West Bengal,Haldia,WBIIDC Ruchi Soya Ind. Durgachak,14,RIRuO,NA,104,44,70,56,49,63,6,0,High
+West Bengal,Haldia,"Priyangbada, Housing Estate",418,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+West Bengal,Howrah,Howrah Municipal Corporation Building,8,RIRuO,NA,104,35,109,63,47,83,14,13,Critical
+West Bengal,Howrah,"Naskarpara Pump House, Ghuseri",10,RIRuO,NA,104,27,111,61,44,85,16,15,Critical
+West Bengal,Howrah,"CDS & Health Centre, Bator",11,RIRuO,NA,104,28,83,53,39,73,12,1,High
+West Bengal,Howrah,"Howrah Municipality School, Bandhaghat",9,RIRuO,NA,104,41,124,70,53,96,17,27,Critical
+West Bengal,Kolkata,"Salt Lake, Rooftop of CK Market",474,RIRuO,NA,104,21,110,55,31,91,22,17,High
+West Bengal,Kolkata,"Moulali, Rooftop of KMC office Building",473,RIRuO,NA,104,30,130,65,38,102,25,27,Critical
+West Bengal,Kolkata,"Minto Park, Inside Park AJC Bose Road",475,RIRuO,NA,104,28,111,57,34,85,21,20,High
+West Bengal,Kolkata,"Dunlop Bridge, National Sample Survey",472,RIRuO,NA,104,27,130,65,38,103,26,28,Critical
+West Bengal,Kolkata,"Behala Chowrasta, Traffic Guard Building",476,RIRuO,NA,104,24,128,62,38,102,25,21,Critical
+West Bengal,Kolkata,"Baishnabghata, Upanagari Sporting Club",477,RIRuO,NA,104,19,109,48,26,78,20,9,High
+West Bengal,Kolkata,"Cossipore Police Station, B.T. Road",162,RIRuO,NA,88,5,592,97,45,140,67,61,Critical
+West Bengal,Kolkata,"Dalhousie Square, Lal Bazzar Police Headqtr.",163,RIRuO,NA,88,5,154,68,26,105,32,38,Critical
+West Bengal,Kolkata,Kasba,348,RIRuO,NA,88,5,150,75,37,124,33,47,Critical
+West Bengal,Kolkata,JD Park,440,RIRuO,NA,Null,Null,Null,Null,Null,Null,Null,Null,Null
+West Bengal,Raniganj,Raniganj Municipality,662,RIRuO,NA,104,46,106,64,53,78,11,6,Critical
+West Bengal,Raniganj,"Mangalpur, SKS School Mangalpur",660,RIRuO,NA,104,29,58,45,36,53,7,0,High
+West Bengal,Raniganj,Jamuria Municipality,661,RIRuO,NA,104,32,60,47,39,56,6,0,High
+West Bengal,Sankrail,Bharat Co-op Housing Society,657,RIRuO,NA,104,25,82,51,35,70,13,1,High
+West Bengal,Sankrail,"Bagan Police Station, Bagan",659,RIRuO,NA,77,29,96,58,37,77,15,8,High
+West Bengal,Sankrail,Dhulagar Gram Pachayat,656,RIRuO,NA,104,27,91,54,38,71,14,3,High
+West Bengal,Sankrail,"P Mukherjee's House, Near SBI Amta",658,RIRuO,NA,104,21,64,37,24,51,10,0,Moderate
+West Bengal,South Suburban,"Chanditala Water Supply , Tollygunge",652,RIRuO,NA,104,25,113,54,30,87,22,15,High
+West Bengal,South Suburban,"Bauipur Police Station, Baruipur",650,RIRuO,NA,104,19,101,46,23,78,21,10,High
+West Bengal,South Suburban,"P Roy Industrial Training Institute, Amtala",651,RIRuO,NA,104,20,107,51,29,86,21,13,High
