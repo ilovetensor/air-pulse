@@ -1,5 +1,8 @@
+import base64
+
 import streamlit as st
 import numpy as np
+import matplotlib.pyplot as plt
 import folium
 from streamlit_folium import folium_static
 from folium.plugins import HeatMap
@@ -10,6 +13,8 @@ from constants import api_key
 import streamlit.components.v1 as components
 import vincent
 import json
+from io import BytesIO
+
 
 
 
@@ -23,21 +28,64 @@ def load_data():
     return df
 
 
+def create_map(id, lst):
+    fig = plt.figure(figsize=(2,2))
+    ax = fig.add_subplot(1,1,1)
+    ax.bar(id, lst)
+    tmp = BytesIO()
+    fig.savefig(tmp, format='png')
+    encode = base64.b64encode(tmp.getvalue()).decode('utf-8')
+    plt.close()
+    return encode
+
 
 def create_datacard(city, pollutant_min, pollutant_max, pollutant_avg, pollutant_id, state):
+    map_encode = create_map(['country', 'state', 'city'],
+                            [country_avg[pollutant_id], state_avg[state, pollutant_id], pollutant_avg],
+                            )
     datacard_html = f"""
-    <div style="width: 200px; height: 150px; padding: 10px; background-color: white; ">
-        <h4>{city}</h4>
-        <p><b>Min:</b> {pollutant_min}</p>
-        <p><b>Max:</b> {pollutant_max}</p>
-        <p><b>Avg:</b> {pollutant_avg}</p>
+    <div style="background-color: white; padding: 5px; padding-bottom: 0px;width: 200px; ">
+        <h4>{city}</h6>
     </div>
-    """
+    """ + '<img src=\'data:image/png;base64,{}\'>'.format(map_encode)
+
+    # Customize your color palette
+
+    # Customize your color palette
+    color_palette = ["#1f78b4", "#33a02c", "#e31a1c"]
+
     popup = folium.Popup(folium.Html(datacard_html, script=True), max_width=300)
-    bar = vincent.Bar([country_avg[pollutant_id], state_avg[state, pollutant_id]])
+
+    # Create a bar chart with Vincent
+    bar = vincent.Bar(
+        [country_avg[pollutant_id], state_avg[state, pollutant_id], pollutant_avg],
+        width=180,
+        height=150,
+    )
     data = json.loads(bar.to_json())
 
-    folium.Vega(data, width="100%", height="100%").add_to(popup)
+    # Add labels and titles
+    data['axes'][0]['title'] = 'country avg    state avg    city avg'
+    data['axes'][1]['title'] = pollutant_id + " levels"
+    data['title'] = 'Pollutant Comparison'
+
+    # Adjust color palette
+    data['scales'][2]['range'] = color_palette
+
+    # Display data values on top of the bars
+    for mark in data['marks'][0]['marks']:
+        mark['properties']['enter']['text'] = {"field": "data.val", "scale": "y", "format": ".2f"}
+
+    custom_labels = ["Country", "State", "Location"]
+    data['axes'][0]['type'] = "ordinal"
+    data['axes'][0]['scale'] = "x"
+    data['axes'][0]['values'] = list(range(len(custom_labels)))
+    data['data'][0]['values'][0]['idx'] = "a"
+    data['data'][0]['values'][1]['idx'] = "d"
+    data['data'][0]['values'][2]['idx'] = "aa"
+
+
+    # folium.Vega(data, width="20%", height="20%").add_to(popup)
     return popup
 
 
@@ -177,8 +225,6 @@ for i in filtered_df.index:
                               filtered_df.loc[i]['pollutant_avg'],
                               filtered_df.loc[i]['pollutant_id'],
                               filtered_df.loc[i]['state']
-
-
                               ),
         tooltip=f"{filtered_df.loc[i]['city']} - {filtered_df.loc[i]['pollutant_avg']}"
 
