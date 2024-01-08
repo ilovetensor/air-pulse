@@ -1,9 +1,11 @@
-numpy
-pandas
-streamlit
-matplotlib
-folium
-requests
-geopandas
-branca
+numpy~=1.26.1
+pandas~=2.1.2
+streamlit~=1.28.1
+matplotlib~=3.8.2
+folium~=0.15.1
+requests~=2.31.0
+geopandas~=0.14.2
+branca~=0.7.0
 
+
+joblib~=1.3.2
