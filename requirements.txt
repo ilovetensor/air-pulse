@@ -2,4 +2,8 @@ numpy
 pandas
 streamlit
 matplotlib
+folium
+requests
+geopandas
+branca
 

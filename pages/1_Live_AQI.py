@@ -6,12 +6,11 @@ import requests
 import pandas as pd
 from io import StringIO
 from io import BytesIO
-
 from constants import api_key
 from drawtools import create_map, create_icon, create_datacard
 from calculations import calculate_aqi
 import geopandas
-
+from branca.colormap import linear
 
 
 @st.cache_data()
@@ -23,6 +22,7 @@ def load_data():
     df.fillna(0, inplace=True)
     return df
 
+
 def calculate_overall_aqi(row):
     parameters = ['SO2', 'OZONE', 'CO', 'PM2.5', 'NO2', 'NH3', 'PM10']
     id = row['station']
@@ -30,7 +30,7 @@ def calculate_overall_aqi(row):
     values = [query[query['pollutant_id'] == parameter]['pollutant_avg'].values[0] if not
     query[query['pollutant_id'] == parameter]['pollutant_avg'].empty else 0 for parameter in parameters]
 
-    aqi_values = [calculate_aqi(parameter, value) for value,parameter in zip(values, parameters)]
+    aqi_values = [calculate_aqi(parameter, value) for value, parameter in zip(values, parameters)]
     return max(aqi_values)
 
 
@@ -48,14 +48,12 @@ st.markdown("""
 - Popupw shows AQI comparision by state and country.
 """)
 
-
-
 # Load Dataset
-bar = st.progress(0.0,"Loading Data")
-df = load_data()
+bar = st.progress(0.0, "Loading Data")
+# df = load_data()
 bar.progress(0.1, "Cleaning Data")
 
-# df = pd.read_csv("./nb-playground/dataset/live_data.csv")
+df = pd.read_csv("./nb-playground/dataset/live_data.csv")
 df.dropna(inplace=True)
 df['state'] = df.apply(lambda row: " ".join(" ".join(row.state.split("_")).split(" ")), axis=1)
 bar.progress(0.12, "Cleaning Data")
@@ -66,15 +64,12 @@ df2['pollutant_min'] = aqi
 df2['pollutant_max'] = aqi
 df2['pollutant_id'] = 'AQI'
 
-df = pd.concat([df,df2], ignore_index=True).reset_index()
-bar.progress(0.19,"Cleaning Data")
+df = pd.concat([df, df2], ignore_index=True).reset_index()
+bar.progress(0.19, "Cleaning Data")
 df.drop_duplicates(inplace=True)
 country_avg = df.groupby('pollutant_id')['pollutant_avg'].mean()
-state_avg = df.groupby(['state','pollutant_id'])['pollutant_avg'].mean()
-bar.progress(0.2,"Applying Filters")
-
-
-
+state_avg = df.groupby(['state', 'pollutant_id'])['pollutant_avg'].mean()
+bar.progress(0.2, "Applying Filters")
 
 # Sidebar Filters
 
@@ -91,20 +86,26 @@ else:
 
 
 # Create Map 1 : HEAT MAP & MARKERS
-bar.progress(0.22,"Setting up Maps")
+bar.progress(0.22, "Setting up Maps")
 m = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
 
 # FeatureGroup for markers
 fg_markers = folium.FeatureGroup(name="Markers")
 m.add_child(fg_markers)
+
+# Html, Css for datacard :
+# with open('popup.html', 'r') as f:
+#     card_html = f.read()
+with open('pages/style.css', 'r') as f:
+    card_css = f.read()
+
 l = filtered_df.shape[0]
 print(l)
 # Add CircleMarkers with Popup and Tooltip to the FeatureGroup
-for idx,i in enumerate(filtered_df.index):
-    bar.progress(0.22 + ((idx+1)/l)/2, "Adding Markers")
+for idx, i in enumerate(filtered_df.index):
+    bar.progress(0.22 + ((idx + 1) / l) / 2, "Adding Markers")
     pollutant_avg = filtered_df.loc[i]['pollutant_avg']
     pollutant_id = filtered_df.loc[i]['pollutant_id']
-
 
     folium.Marker(
         location=filtered_df.loc[i][['latitude', 'longitude']].values,
@@ -114,16 +115,15 @@ for idx,i in enumerate(filtered_df.index):
                               state_avg,
                               filtered_df.loc[i]['pollutant_avg'],
                               filtered_df.loc[i]['pollutant_id'],
-                              filtered_df.loc[i]['state']
+                              filtered_df.loc[i]['state'],
+                              card_css
                               ),
         tooltip=f"{filtered_df.loc[i]['city']} - {filtered_df.loc[i]['pollutant_avg']}"
     ).add_to(fg_markers)
 
-
 # FeatureGroup for heatmap
 fg_heatmap = folium.FeatureGroup(name="Heatmap", overlay=True)
 m.add_child(fg_heatmap)
-
 
 # Update the map based on checkbox status
 heatmap_data = filtered_df[['latitude', 'longitude', 'pollutant_avg']].values.tolist()
@@ -135,12 +135,9 @@ bar.progress(0.8, "you are just there... few seconds more")
 # Display Map using folium_static
 folium_static(m)
 
-
-
 # CREATE MAP2 : STATE AVERGE &
 
 filtered_state = state_avg.xs(selected_pollutant, level='pollutant_id')
-
 
 m2 = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
 ind_geojson = geopandas.read_file('nb-playground/dataset/india.json')
@@ -150,13 +147,9 @@ ind_geojson['avg'] = ind_geojson['NAME_1'].map(filtered_state.to_dict())
 # folium.GeoJson(ind_geojson).add_to(m2)
 
 
-
 st.dataframe(filtered_state)
 
 st.text(filtered_state.to_dict())
-
-
-from branca.colormap import linear
 
 colormap = linear.YlGn_09.scale(
     min(filtered_state.values), max(filtered_state.values)
@@ -204,3 +197,4 @@ colormap.add_to(m2)
 folium.LayerControl().add_to(m2)
 folium_static(m2)
 bar.progress(1.0, "hurray!")
+bar.empty()

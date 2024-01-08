@@ -1,0 +1,100 @@
+:root {
+  --chart-width: 160px;
+  --chart-height: 150px;
+  --bar-size: 30px;
+  --bar-color: #FFC600;
+  --bar-rounded: 5px;
+  --grid-color: #aaa;
+  --font-px: 13px;
+}
+
+
+.chart-wrap {
+  display: flex;
+  flex-direction: row;
+  font-size: var(--font-px);
+  width: var(--chart-width);
+  height: var(--chart-height);
+  font-family: sans-serif;
+}
+
+.chart-wrap .title {
+  text-align: center;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 2px solid var(--grid-color);
+  background: repeating-linear-gradient(0deg, transparent, transparent 19.5%, rgba(170, 170, 170, 0.7) 20%);
+}
+
+.grid .bar {
+  background-color: var(--bar-color);
+  width: var(--bar-size);
+  height: var(--bar-value);
+  align-self: flex-end;
+  margin: 0 auto;
+  border-radius: var(--bar-rounded) var(--bar-rounded) 0 0;
+  position: relative;
+}
+
+.grid .bar:hover {
+  opacity: 0.7;
+}
+
+.grid .bar::after {
+  content: attr(data-name);
+  top: -3em;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.grid.horizontal {
+  flex-direction: column;
+  border-bottom: none;
+  border-left: 0px solid var(--grid-color);
+  background: repeating-linear-gradient(90deg, transparent, transparent 19.5%, rgba(170, 170, 170, 0) 20%);
+}
+
+.grid.horizontal .bar {
+  height: var(--bar-size);
+  width: var(--bar-value);
+  align-self: flex-start;
+  margin: auto 0 auto 0;
+  border-radius: 0 var(--bar-rounded) var(--bar-rounded) 0;
+}
+
+.grid.horizontal .bar::after {
+  top: initial;
+  left: 0%;
+  padding: 0 10px;
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  transform: rotate(0deg);
+  line-height: var(--bar-size);
+}
+.label-l {
+  width: 20px;
+}
+.values{
+  display: flex;
+  flex-direction: column;
+}
+.value{
+    height: var(--bar-size);
+  width: var(--bar-value);
+  align-self: flex-start;
+  margin: auto 0 auto 0;
+  padding: 1px 6px;
+
+  line-height: var(--bar-size);
+
+}

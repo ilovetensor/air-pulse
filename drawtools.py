@@ -78,15 +78,34 @@ def create_icon(pollutant_avg, pollutant_id):
     )
     return icon_plane
 
-def create_datacard(city, country_avg, state_avg, pollutant_avg, pollutant_id, state):
-    map_encode = create_map(['country avg.', 'state avg.', 'city avg.'],
-                            [country_avg[pollutant_id], state_avg[state, pollutant_id], pollutant_avg],
-                            )
-    datacard_html = f"""
+
+def create_datacard(city, country_avg, state_avg, pollutant_avg, pollutant_id, state, card_css):
+    # map_encode = create_map(['country avg.', 'state avg.', 'city avg.'],
+    #                         [country_avg[pollutant_id], state_avg[state, pollutant_id], pollutant_avg],
+    #                         )
+    lst = np.array([country_avg[pollutant_id], state_avg[state, pollutant_id], pollutant_avg])
+    ct, st, cy = ((lst/max(lst))*1000)//10
+    ct_val, st_val, cy_val = lst.astype('int')
+    datacard_html = (f"""
     <div style="background-color: white; padding: 5px; padding-bottom: 0px; margin: 0px;">
         <h5>{city}</h5>{pollutant_id}  |  {state}
+        <link rel="stylesheet" href="style.css">
+        <div class="chart-wrap">
+            <div class="values">
+                <div class="value"> {ct_val}</div>
+                <div class="value"> {st_val}</div>
+                <div class="value"> {cy_val}</div>
+          </div>
+          <div class="grid horizontal">
+                <div class="bar" style="--bar-value:{ct}%;" data-name="Country avg. " title="Country avg. "></div>
+                <div class="bar" style="--bar-value:{st}%;" data-name="State avg. " title="State avg. "></div>
+                <div class="bar" style="--bar-value:{cy}%;" data-name="City avg. " title="City avg. "></div>
+          </div>
+        </div>
     </div>
-    """ + '<img src=\'data:image/png;base64,{}\'>'.format(map_encode)
+    <style>{card_css}</style>
+    """ )
+    # + '<img src=\'data:image/png;base64,{}\'>'.format(map_encode))
     popup = folium.Popup(folium.Html(datacard_html, script=True),
                          max_width=220,
                          )
