@@ -15,12 +15,30 @@ from branca.colormap import linear
 
 @st.cache_data()
 def load_data():
-    response_API = requests.get(
-        f"https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key={api_key}&format=csv&limit=9000")
-    data = response_API.text
-    df = pd.read_csv(StringIO(data))
+    df = pd.read_csv("./nb-playground/dataset/live_data.csv")
+    # response_API = requests.get(
+    #     f"https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key={api_key}&format=csv&limit=9000")
+    # data = response_API.text
+    # df = pd.read_csv(StringIO(data))
     df.fillna(0, inplace=True)
     return df
+
+@st.cache_data()
+def clean_data(df):
+    df.dropna(inplace=True)
+    df['state'] = df.apply(lambda row: " ".join(" ".join(row.state.split("_")).split(" ")), axis=1)
+    aqi = df.apply(lambda row: calculate_overall_aqi(row), axis=1)
+    df2 = df.copy()
+    df2['pollutant_avg'] = aqi
+    df2['pollutant_min'] = aqi
+    df2['pollutant_max'] = aqi
+    df2['pollutant_id'] = 'AQI'
+
+    df = pd.concat([df, df2], ignore_index=True).reset_index()
+    df.drop_duplicates(inplace=True)
+    country = df.groupby('pollutant_id')['pollutant_avg'].mean()
+    state = df.groupby(['state', 'pollutant_id'])['pollutant_avg'].mean()
+    return df, country, state
 
 
 def calculate_overall_aqi(row):
@@ -50,25 +68,12 @@ st.markdown("""
 
 # Load Dataset
 bar = st.progress(0.0, "Loading Data")
-# df = load_data()
-bar.progress(0.1, "Cleaning Data")
+df = load_data()
+bar.progress(0.08, "Cleaning Data")
 
-df = pd.read_csv("./nb-playground/dataset/live_data.csv")
-df.dropna(inplace=True)
-df['state'] = df.apply(lambda row: " ".join(" ".join(row.state.split("_")).split(" ")), axis=1)
-bar.progress(0.12, "Cleaning Data")
-aqi = df.apply(lambda row: calculate_overall_aqi(row), axis=1)
-df2 = df.copy()
-df2['pollutant_avg'] = aqi
-df2['pollutant_min'] = aqi
-df2['pollutant_max'] = aqi
-df2['pollutant_id'] = 'AQI'
+df, country_avg, state_avg = clean_data(df)
 
-df = pd.concat([df, df2], ignore_index=True).reset_index()
-bar.progress(0.19, "Cleaning Data")
-df.drop_duplicates(inplace=True)
-country_avg = df.groupby('pollutant_id')['pollutant_avg'].mean()
-state_avg = df.groupby(['state', 'pollutant_id'])['pollutant_avg'].mean()
+
 bar.progress(0.2, "Applying Filters")
 
 # Sidebar Filters
@@ -135,14 +140,19 @@ bar.progress(0.8, "you are just there... few seconds more")
 # Display Map using folium_static
 folium_static(m)
 
-# CREATE MAP2 : STATE AVERGE &
+# CREATE MAP2 : STATE AVERGE
+@st.cache_data()
+def load_state_data():
+    json_file = geopandas.read_file('nb-playground/dataset/india.json')
+    json_file = json_file[json_file['NAME_1'].isin(filtered_state.index)]
+    json_file['avg'] = json_file['NAME_1'].map(filtered_state.to_dict())
+    return json_file
+
 
 filtered_state = state_avg.xs(selected_pollutant, level='pollutant_id')
 
 m2 = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
-ind_geojson = geopandas.read_file('nb-playground/dataset/india.json')
-ind_geojson = ind_geojson[ind_geojson['NAME_1'].isin(filtered_state.index)]
-ind_geojson['avg'] = ind_geojson['NAME_1'].map(filtered_state.to_dict())
+ind_geojson = load_state_data()
 
 # folium.GeoJson(ind_geojson).add_to(m2)
 
