@@ -1,6 +1,6 @@
 import streamlit as st
 import folium
-from streamlit_folium import folium_static
+from streamlit_folium import folium_static, st_folium
 from folium.plugins import HeatMap
 import requests
 import pandas as pd
@@ -11,6 +11,10 @@ from drawtools import create_map, create_icon, create_datacard
 from calculations import calculate_aqi
 import geopandas
 from branca.colormap import linear
+from streamlit_card import card
+
+with open('pages/style.css', 'r') as f:
+    card_css = f.read()
 
 
 @st.cache_data()
@@ -22,6 +26,7 @@ def load_data():
     # df = pd.read_csv(StringIO(data))
     df.fillna(0, inplace=True)
     return df
+
 
 @st.cache_data()
 def clean_data(df):
@@ -43,6 +48,8 @@ def clean_data(df):
 
 def calculate_overall_aqi(row):
     parameters = ['SO2', 'OZONE', 'CO', 'PM2.5', 'NO2', 'NH3', 'PM10']
+    parameters = ['PM2.5', 'PM10']
+
     id = row['station']
     query = df[df['station'] == id]
     values = [query[query['pollutant_id'] == parameter]['pollutant_avg'].values[0] if not
@@ -52,63 +59,75 @@ def calculate_overall_aqi(row):
     return max(aqi_values)
 
 
+st.set_page_config(layout="wide")
 st.title("Real-Time AQI & Hotspots 💨")
 st.subheader("Map Your Way to Cleaner Air")
 
 st.markdown("""
-**Filters:**
-- Select a pollutant to focus on.
-- Choose a state to view specific data.
 
-**Visualizations:**
-- Markers indicate AQI levels at individual locations.
-- Heatmap visualizes AQI intensity across the map.
-- Popupw shows AQI comparision by state and country.
+ **Hey there, air-conscious citizen!** 
+
+We know you deserve to breathe easy, but deciphering those government reports can leave you gasping for answers. That's where **Live AQI Mapping** comes in – your real-time window into India's air quality, state by state. ️
+
+**Ditch the stuffy reports and dive into an interactive playground of air data.**  Craving pollution heatmaps that 
+pulse with life? Charts that tell tales of the wind? Graphs that waltz with seasonal trends? We've got them all, 
+ready to transform confusing stats into crystal-clear insights.
+
+**And the best part?** This vibrant air portrait is painted with **live data**, streaming straight from data.gov.in. 
+⚡️ No stale stats, no murky sources, just pure, unfiltered air truth.
+
+**Ready to take a deep breath of confidence?**  Go ahead, explore your air, your way. Welcome to the world of clear skies and informed breaths. ✨
+
+**Welcome to Live AQI Mapping.** 
+
 """)
 
 # Load Dataset
-bar = st.progress(0.0, "Loading Data")
 df = load_data()
-bar.progress(0.08, "Cleaning Data")
-
+# Clean Dataset
 df, country_avg, state_avg = clean_data(df)
 
-
-bar.progress(0.2, "Applying Filters")
-
-# Sidebar Filters
-
-all_states_option = ['All States'] + list(df['state'].unique())
-selected_state = st.sidebar.selectbox('Select State:', all_states_option)
-selected_pollutant = st.sidebar.selectbox('Select Pollutant:', df['pollutant_id'].unique())
+# Controllers
+maps_cols = st.columns([3, 1])
+with maps_cols[1]:
+    st.markdown(
+        """
+        # Live AQI
+        Select the `state filter`, `pollutant` to analyse and make changes in `heatmap controlls` 
+        to get the best results from the map 🍕
+        """)
+    all_states_option = ['All States'] + list(df['state'].unique())
+    selected_state = st.selectbox('Select State:', all_states_option)
+    selected_pollutant = st.selectbox('Select Pollutant:', df['pollutant_id'].unique())
+    checks = st.columns(2)
+    with checks[0]:
+        is_heatmap = st.checkbox('Heatmap', True)
+    with checks[1]:
+        is_marker = st.checkbox('Markers', True)
+    st.markdown("**Heatmap Controlls**")
+    radius = st.slider("Heatmap Radius", 1, 40, 25)
+    blur = st.slider("Heatmap Blur", 1, 40, 25)
+    st.info('Data Last Updated : 12 minutes ago')
 
 # Filter DataFrame based on selected options
 if selected_state == 'All States':
     filtered_df = df[df['pollutant_id'] == selected_pollutant]
-
 else:
     filtered_df = df[(df['state'] == selected_state) & (df['pollutant_id'] == selected_pollutant)]
 
-
 # Create Map 1 : HEAT MAP & MARKERS
-bar.progress(0.22, "Setting up Maps")
-m = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
+
+m = folium.Map(location=[20.5937, 78.9629], zoom_start=5, width=1000)
 
 # FeatureGroup for markers
-fg_markers = folium.FeatureGroup(name="Markers")
-m.add_child(fg_markers)
+fg_markers = folium.FeatureGroup(name="Markers", lay=True)
 
-# Html, Css for datacard :
-# with open('popup.html', 'r') as f:
-#     card_html = f.read()
-with open('pages/style.css', 'r') as f:
-    card_css = f.read()
-
-l = filtered_df.shape[0]
+l: int = filtered_df.shape[0]
 print(l)
+
 # Add CircleMarkers with Popup and Tooltip to the FeatureGroup
 for idx, i in enumerate(filtered_df.index):
-    bar.progress(0.22 + ((idx + 1) / l) / 2, "Adding Markers")
+    # bar.progress(0.22 + ((idx + 1) / l) / 2, "Adding Markers")
     pollutant_avg = filtered_df.loc[i]['pollutant_avg']
     pollutant_id = filtered_df.loc[i]['pollutant_id']
 
@@ -126,21 +145,38 @@ for idx, i in enumerate(filtered_df.index):
         tooltip=f"{filtered_df.loc[i]['city']} - {filtered_df.loc[i]['pollutant_avg']}"
     ).add_to(fg_markers)
 
-# FeatureGroup for heatmap
+# Heatmap - FeatureGroup
 fg_heatmap = folium.FeatureGroup(name="Heatmap", overlay=True)
-m.add_child(fg_heatmap)
-
-# Update the map based on checkbox status
 heatmap_data = filtered_df[['latitude', 'longitude', 'pollutant_avg']].values.tolist()
-HeatMap(heatmap_data, radius=25).add_to(fg_heatmap)
+HeatMap(heatmap_data, radius=radius, blur=blur).add_to(fg_heatmap)
 
 # Add LayerControl to manage visibility
-folium.LayerControl(collapsed=False).add_to(m)
-bar.progress(0.8, "you are just there... few seconds more")
-# Display Map using folium_static
-folium_static(m)
+layers = folium.LayerControl(collapsed=False)
 
-# CREATE MAP2 : STATE AVERGE
+# Checkbox functionality
+if is_marker and is_heatmap:
+    fgs = [fg_heatmap, fg_markers]
+if is_marker and not is_heatmap:
+    fgs = [fg_markers]
+if is_heatmap and not is_marker:
+    fgs = [fg_heatmap]
+if not is_heatmap and not is_marker:
+    fgs = []
+
+# Displaying map with st_folium
+with maps_cols[0]:
+    st_folium(m, width=1000, feature_group_to_add=fgs)
+
+st.markdown('---')
+
+# KPI METRICS : VALUES AND FACTS
+kpis = st.columns(4)
+with kpis[0]:
+    st.metric('sdf','sdf','sdf')
+
+st.markdown('---')
+
+# CREATE MAP2 : STATES AVERAGE
 @st.cache_data()
 def load_state_data():
     json_file = geopandas.read_file('nb-playground/dataset/india.json')
@@ -206,5 +242,4 @@ colormap.add_to(m2)
 
 folium.LayerControl().add_to(m2)
 folium_static(m2)
-bar.progress(1.0, "hurray!")
-bar.empty()
+
