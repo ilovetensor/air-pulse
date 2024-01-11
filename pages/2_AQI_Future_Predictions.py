@@ -1,14 +1,12 @@
-import streamlit as st
+import joblib
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import joblib
-from constants import state_dict, state_dict_reverse, month_map
-import plotly.figure_factory as ff
 import plotly.express as px
 import plotly.graph_objects as go
-from streamlit_card import card
-import seaborn as sns
+import streamlit as st
+
+from constants import state_dict, state_dict_reverse, month_map
+
 
 # conn = st.connection("snowflake")
 
