@@ -1,19 +1,19 @@
-import streamlit as st
-import folium
-from streamlit_folium import folium_static, st_folium
-from folium.plugins import HeatMap
-import requests
-import pandas as pd
 from io import StringIO
-from io import BytesIO
-api_key = st.secrets["api_key"]
-from drawtools import create_map, create_icon, create_datacard
+
+import folium
+import pandas as pd
+import requests
+import streamlit as st
+from folium.plugins import HeatMap
+from streamlit_folium import st_folium
+from drawtools import create_icon, create_datacard
 from calculations import calculate_aqi
 import geopandas
 from branca.colormap import linear
-from streamlit_card import card
 import numpy as np
 import plotly.graph_objects as go
+
+api_key = st.secrets["api_key"]
 
 
 @st.cache_data()
@@ -182,7 +182,8 @@ with kpis[1]:
               delta_color="normal")
 with kpis[2]:
     min_c = aqi_states[aqi_states < 150]
-    st.metric("TOTAL GOOD STATES ", str(len(min_c)) + "🌷", "Below 150", delta_color="normal", help=", ".join(min_c.index))
+    st.metric("TOTAL GOOD STATES ", str(len(min_c)) + "🌷", "Below 150", delta_color="normal",
+              help=", ".join(min_c.index))
 with kpis[3]:
     max_c = aqi_states[aqi_states > 300]
     st.metric("HAZARDOUS STATES ", str(len(max_c)) + "☢", "Above 300", delta_color="inverse",
@@ -245,7 +246,6 @@ filtered_state = state_avg
 m2 = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
 ind_geojson = load_state_data()
 
-
 colormap = linear.RdPu_04.scale(
     min(filtered_state[s_pollutant]), max(filtered_state[s_pollutant])
 )
@@ -292,10 +292,8 @@ folium.GeoJson(
 fg_colormap = folium.FeatureGroup(name="colormap")
 colormap.caption = " color scale"
 
-
-
 with state_cols[0]:
-    st_folium(m2,'k', width=700, height=660, feature_group_to_add=[fg_geojson, fg_colormap], returned_objects=[])
+    st_folium(m2, 'k', width=700, height=660, feature_group_to_add=[fg_geojson, fg_colormap], returned_objects=[])
 
 # Data Query : Bar Graph
 
