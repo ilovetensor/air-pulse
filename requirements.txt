@@ -11,3 +11,4 @@ streamlit-folium
 plotly~=5.18.0
 seaborn~=0.13.0
 scikit-learn
+scipy
