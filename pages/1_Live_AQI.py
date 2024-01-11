@@ -6,8 +6,8 @@ import requests
 import streamlit as st
 from folium.plugins import HeatMap
 from streamlit_folium import st_folium
-from drawtools import create_icon, create_datacard
-from calculations import calculate_aqi
+from utils.drawtools import create_icon, create_datacard
+from utils.calculations import calculate_aqi
 import geopandas
 from branca.colormap import linear
 import numpy as np

@@ -5,7 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-from constants import state_dict, state_dict_reverse, month_map
+from utils.constants import state_dict, state_dict_reverse, month_map
 
 
 # conn = st.connection("snowflake")
