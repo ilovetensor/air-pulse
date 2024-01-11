@@ -6,25 +6,25 @@ import requests
 import pandas as pd
 from io import StringIO
 from io import BytesIO
-from constants import api_key
+api_key = st.secrets["api_key"]
 from drawtools import create_map, create_icon, create_datacard
 from calculations import calculate_aqi
 import geopandas
 from branca.colormap import linear
 from streamlit_card import card
-
-with open('pages/style.css', 'r') as f:
-    card_css = f.read()
+import numpy as np
+import plotly.graph_objects as go
 
 
 @st.cache_data()
 def load_data():
-    df = pd.read_csv("./nb-playground/dataset/live_data.csv")
-    # response_API = requests.get(
-    #     f"https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key={api_key}&format=csv&limit=9000")
-    # data = response_API.text
-    # df = pd.read_csv(StringIO(data))
+    # df = pd.read_csv("./nb-playground/dataset/live_data.csv")
+    response_API = requests.get(
+        f"https://api.data.gov.in/resource/3b01bcb8-0b14-4abf-b6f2-c1bfd384ba69?api-key={api_key}&format=csv&limit=9000")
+    data = response_API.text
+    df = pd.read_csv(StringIO(data))
     df.fillna(0, inplace=True)
+
     return df
 
 
@@ -32,34 +32,31 @@ def load_data():
 def clean_data(df):
     df.dropna(inplace=True)
     df['state'] = df.apply(lambda row: " ".join(" ".join(row.state.split("_")).split(" ")), axis=1)
+    df = df.pivot(columns='pollutant_id', index=['state', 'city', 'station', 'latitude', 'longitude'],
+                  values='pollutant_avg')
+    df.fillna(df.mean(), inplace=True)
     aqi = df.apply(lambda row: calculate_overall_aqi(row), axis=1)
-    df2 = df.copy()
-    df2['pollutant_avg'] = aqi
-    df2['pollutant_min'] = aqi
-    df2['pollutant_max'] = aqi
-    df2['pollutant_id'] = 'AQI'
-
-    df = pd.concat([df, df2], ignore_index=True).reset_index()
+    df['AQI'] = aqi
     df.drop_duplicates(inplace=True)
-    country = df.groupby('pollutant_id')['pollutant_avg'].mean()
-    state = df.groupby(['state', 'pollutant_id'])['pollutant_avg'].mean()
+    pollutants = df.columns
+    country = df.mean()
+    df = df.reset_index()
+    state = df.groupby('state')[pollutants].mean()
     return df, country, state
 
 
 def calculate_overall_aqi(row):
-    parameters = ['SO2', 'OZONE', 'CO', 'PM2.5', 'NO2', 'NH3', 'PM10']
+    parameters = row.index
     parameters = ['PM2.5', 'PM10']
-
-    id = row['station']
-    query = df[df['station'] == id]
-    values = [query[query['pollutant_id'] == parameter]['pollutant_avg'].values[0] if not
-    query[query['pollutant_id'] == parameter]['pollutant_avg'].empty else 0 for parameter in parameters]
-
-    aqi_values = [calculate_aqi(parameter, value) for value, parameter in zip(values, parameters)]
-    return max(aqi_values)
+    aqi_values = [calculate_aqi(parameter, value) for value, parameter in zip(row[parameters].values, parameters)]
+    return int(max(aqi_values))
 
 
-st.set_page_config(layout="wide")
+with open('pages/style.css', 'r') as f:
+    card_css = f.read()
+
+st.set_page_config(layout="wide",
+                   initial_sidebar_state="collapsed")
 st.title("Real-Time AQI & Hotspots 💨")
 st.subheader("Map Your Way to Cleaner Air")
 
@@ -98,7 +95,7 @@ with maps_cols[1]:
         """)
     all_states_option = ['All States'] + list(df['state'].unique())
     selected_state = st.selectbox('Select State:', all_states_option)
-    selected_pollutant = st.selectbox('Select Pollutant:', df['pollutant_id'].unique())
+    selected_pollutant = st.selectbox('Select Pollutant:', df.columns[-8:])
     checks = st.columns(2)
     with checks[0]:
         is_heatmap = st.checkbox('Heatmap', True)
@@ -111,25 +108,23 @@ with maps_cols[1]:
 
 # Filter DataFrame based on selected options
 if selected_state == 'All States':
-    filtered_df = df[df['pollutant_id'] == selected_pollutant]
+    filtered_df = df
 else:
-    filtered_df = df[(df['state'] == selected_state) & (df['pollutant_id'] == selected_pollutant)]
+    filtered_df = df[df['state'] == selected_state]
 
 # Create Map 1 : HEAT MAP & MARKERS
 
 m = folium.Map(location=[20.5937, 78.9629], zoom_start=5, width=1000)
 
 # FeatureGroup for markers
-fg_markers = folium.FeatureGroup(name="Markers", lay=True)
+fg_markers = folium.FeatureGroup(name="Markers", overlay=True)
 
 l: int = filtered_df.shape[0]
-print(l)
-
 # Add CircleMarkers with Popup and Tooltip to the FeatureGroup
 for idx, i in enumerate(filtered_df.index):
     # bar.progress(0.22 + ((idx + 1) / l) / 2, "Adding Markers")
-    pollutant_avg = filtered_df.loc[i]['pollutant_avg']
-    pollutant_id = filtered_df.loc[i]['pollutant_id']
+    pollutant_avg = filtered_df.loc[i][selected_pollutant]
+    pollutant_id = selected_pollutant
 
     folium.Marker(
         location=filtered_df.loc[i][['latitude', 'longitude']].values,
@@ -137,17 +132,17 @@ for idx, i in enumerate(filtered_df.index):
         popup=create_datacard(filtered_df.loc[i]['station'],
                               country_avg,
                               state_avg,
-                              filtered_df.loc[i]['pollutant_avg'],
-                              filtered_df.loc[i]['pollutant_id'],
+                              pollutant_avg,
+                              pollutant_id,
                               filtered_df.loc[i]['state'],
                               card_css
                               ),
-        tooltip=f"{filtered_df.loc[i]['city']} - {filtered_df.loc[i]['pollutant_avg']}"
+        tooltip=f"{filtered_df.loc[i]['city']} - {pollutant_avg}"
     ).add_to(fg_markers)
 
 # Heatmap - FeatureGroup
 fg_heatmap = folium.FeatureGroup(name="Heatmap", overlay=True)
-heatmap_data = filtered_df[['latitude', 'longitude', 'pollutant_avg']].values.tolist()
+heatmap_data = filtered_df[['latitude', 'longitude', selected_pollutant]].values.tolist()
 HeatMap(heatmap_data, radius=radius, blur=blur).add_to(fg_heatmap)
 
 # Add LayerControl to manage visibility
@@ -165,81 +160,157 @@ if not is_heatmap and not is_marker:
 
 # Displaying map with st_folium
 with maps_cols[0]:
-    st_folium(m, width=1000, feature_group_to_add=fgs)
+    st_folium(m, width=1000, feature_group_to_add=fgs, returned_objects=[])
 
-st.markdown('---')
+#
+
 
 # KPI METRICS : VALUES AND FACTS
+
+# st.markdown('---')
+st.markdown('### Some AQI live facts ')
+
+aqi_states = state_avg['AQI']
 kpis = st.columns(4)
 with kpis[0]:
-    st.metric('sdf','sdf','sdf')
-
+    max_s = np.argmax(aqi_states)
+    st.metric("STATE WITH WORST AQI", str(aqi_states.index[max_s]) + "  ⚠", aqi_states.values[max_s],
+              delta_color="inverse")
+with kpis[1]:
+    min_s = np.argmin(aqi_states)
+    st.metric("STATE WITH LEAST AQI", str(aqi_states.index[min_s]) + "  🐦", aqi_states.values[min_s].round(),
+              delta_color="normal")
+with kpis[2]:
+    min_c = aqi_states[aqi_states < 150]
+    st.metric("TOTAL GOOD STATES ", str(len(min_c)) + "🌷", "Below 150", delta_color="normal", help=", ".join(min_c.index))
+with kpis[3]:
+    max_c = aqi_states[aqi_states > 300]
+    st.metric("HAZARDOUS STATES ", str(len(max_c)) + "☢", "Above 300", delta_color="inverse",
+              help=", ".join(max_c.index))
 st.markdown('---')
 
 # CREATE MAP2 : STATES AVERAGE
+
+st.markdown("## Explore Your State's Air Quality")
+st.markdown("""Dive deep into the air quality of your state with our dedicated filters, providing you with the most useful insights about your local regions.
+
+**Click on your state** to reveal a visual representation of cities within that state, accompanied by key visuals that highlight crucial air quality information.
+
+Lets interact ....""")
+
+state_cols = st.columns(2)
+
+with state_cols[1]:
+    select_cols = st.columns(2)
+    with select_cols[0]:
+        s_pollutant = st.selectbox("Select pollutant for map", df.columns[-8:])
+
+    with select_cols[1]:
+        s_state = st.selectbox('Selected State:', list(df['state'].unique()), )
+
+    heatmap_data = df[df.state == s_state].groupby('city')[df.columns[-8:]].mean().astype('int')
+
+    fig_heatmap = go.Figure(data=go.Heatmap(
+        z=heatmap_data.values,
+        x=list(heatmap_data.columns),
+        y=list(heatmap_data.index),
+        colorscale='Aggrnyl',  # Choose your preferred colorscale
+        hoverongaps=False,
+        hoverinfo='z',
+        colorbar=dict(title='AQI Levels')
+    ))
+    #
+    fig_heatmap.update_layout(title="Live City vs Pollutant Values Heatmap",
+                              xaxis_title="Year",
+                              yaxis_title="State",
+                              xaxis_nticks=len(heatmap_data.columns),
+                              yaxis_nticks=len(heatmap_data.index),
+                              height=600
+                              )
+
+    st.plotly_chart(fig_heatmap, use_container_width=True)
+
+
 @st.cache_data()
 def load_state_data():
     json_file = geopandas.read_file('nb-playground/dataset/india.json')
     json_file = json_file[json_file['NAME_1'].isin(filtered_state.index)]
-    json_file['avg'] = json_file['NAME_1'].map(filtered_state.to_dict())
+    for col in filtered_state.columns:
+        json_file[col] = json_file['NAME_1'].map(filtered_state[col].to_dict())
     return json_file
 
 
-filtered_state = state_avg.xs(selected_pollutant, level='pollutant_id')
+filtered_state = state_avg
 
 m2 = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
 ind_geojson = load_state_data()
 
-# folium.GeoJson(ind_geojson).add_to(m2)
 
-
-st.dataframe(filtered_state)
-
-st.text(filtered_state.to_dict())
-
-colormap = linear.YlGn_09.scale(
-    min(filtered_state.values), max(filtered_state.values)
+colormap = linear.RdPu_04.scale(
+    min(filtered_state[s_pollutant]), max(filtered_state[s_pollutant])
 )
-st.write(max(filtered_state))
 
 popup = folium.GeoJsonPopup(fields=["NAME_1"], )
 tooltip = folium.GeoJsonTooltip(
-    fields=["NAME_1", "avg"],
-    aliases=["State:", f"{selected_pollutant} :"],
+    fields=["NAME_1", s_pollutant],
+    aliases=["State:", f"{s_pollutant} :"],
     localize=True,
-    sticky=False,
+    sticky=True,
     labels=True,
     style="""
         background-color: #F0EFEF;
-        border: 2px solid black;
-        border-radius: 3px;
+        border-radius: 6px;
         box-shadow: 3px;
+        font-size: 13px;
     """,
     max_width=800,
 )
+
+fg_geojson = folium.FeatureGroup(name='geojson', overlay=True)
+
 folium.GeoJson(
     ind_geojson,
     name="pollutant avg",
     style_function=lambda feature: {
-        "fillColor": colormap(filtered_state[feature["properties"]["NAME_1"]]),
+        "fillColor": colormap(filtered_state[s_pollutant][feature["properties"]["NAME_1"]]),
         "color": "black",
         "weight": 1,
         "dashArray": "5, 5",
-        "fillOpacity": 0.9,
+        "fillOpacity": 1,
     },
     highlight_function=lambda feature: {
         "fillColor": (
-            colormap(filtered_state[feature["properties"]["NAME_1"]] - 2)
+            colormap(filtered_state[s_pollutant][feature["properties"]["NAME_1"]] - 2)
         ),
     },
     # popup=popup,
     tooltip=tooltip,
-    popup_keep_highlighted=True
-).add_to(m2)
+    popup_keep_highlighted=True,
 
+).add_to(fg_geojson)
+
+fg_colormap = folium.FeatureGroup(name="colormap")
 colormap.caption = " color scale"
-colormap.add_to(m2)
 
-folium.LayerControl().add_to(m2)
-folium_static(m2)
 
+
+with state_cols[0]:
+    st_folium(m2,'k', width=700, height=660, feature_group_to_add=[fg_geojson, fg_colormap], returned_objects=[])
+
+# Data Query : Bar Graph
+
+st.subheader("Query the Data ")
+
+query_c = st.columns(2)
+with query_c[0]:
+    q_method = st.selectbox("Select the query method: ", ['State Level', 'City Level'], )
+    if q_method == "State Level":
+        query_filter = state_avg
+
+with query_c[1]:
+    if q_method == 'City Level':
+        q_state = st.selectbox("Select State", df.state.unique(), disabled=False)
+        query_filter = df[df.state == q_state].groupby('city')[df.columns[-8:]].mean()
+st.dataframe(query_filter, width=1400)
+filename = "_".join(q_method.split()) + "Air_Quality_Data.csv"
+st.download_button('Download CSV', query_filter.to_csv(), filename, )

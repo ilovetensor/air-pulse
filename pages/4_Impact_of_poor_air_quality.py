@@ -1,16 +1,22 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
-from constants import state_dict, state_dict_reverse, month_map
-from sklearn.preprocessing import MinMaxScaler
-import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import plotly.graph_objects as go
+import streamlit as st
 
+from constants import state_dict, state_dict_reverse, month_map
+
+# conn = st.connection("snowflake")
 @st.cache_data()
 def load_data():
+    # session = conn.session()
+    # respiratory = session.table('AIRPULSE.HISTORICAL_DATA.RESPIRATORY_PROBLEMS').to_pandas()
+    # respiratory.columns = ['state', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+    #    'Oct', 'Nov', 'Dec', 'Total', 'year']
+    # df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
     respiratory = pd.read_csv('nb-playground/dataset/respiratory_problems_08_to_15.csv')
     df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
+
+    df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
     df.month = (df.month - 1).map(month_map)
     merged_df = pd.merge(df, respiratory)

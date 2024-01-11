@@ -1,4 +1,3 @@
-api_key = '579b464db66ec23bdd000001cbe3f36f700048854084fbab4711730e'
 state_dict = {'Andhra Pradesh': 0,
               'Arunachal Pradesh': 1,
               'Assam': 2,

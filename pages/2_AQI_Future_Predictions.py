@@ -10,6 +10,8 @@ import plotly.graph_objects as go
 from streamlit_card import card
 import seaborn as sns
 
+# conn = st.connection("snowflake")
+
 
 # st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
@@ -25,22 +27,17 @@ def load_model():
 def load_data():
     df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
     return df
-
-
-# Define a function for weighted averaging
-# def weighted_average_prediction(models, weights, input_data):
-#     predictions = [model.predict(input_data) for model in models]
-#     weighted_prediction = sum(weight * prediction for weight, prediction in zip(weights, predictions))
-#     return weighted_prediction
+    # session = conn.session()
+    # table = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    # table.columns = ['state', 'year', 'month', 'aqi']
+    # return table
 
 
 def weighted_average_prediction(models: list, weights: list, predict_df: pd.DataFrame):
     preds = pd.DataFrame()
     for i, m in enumerate(models):
-        # m.fit(x_train, y_train)
         preds[i] = m.predict(predict_df)
     preds['weighted_pred'] = (preds * weights).sum(axis=1) / sum(weights)
-
     return preds['weighted_pred']
 
 
@@ -73,10 +70,11 @@ cols = ['state', 'year', 'month']
 input_data = pd.DataFrame([[state_selected, year_selected, i] for i in range(1, 13)], columns=cols)
 
 models, weights = load_model()
-print(models, weights)
+# print(models, weights)
 
 prediction = weighted_average_prediction(models, weights, input_data)
 df = load_data()
+
 
 if year_selected == 2024:
     pred_df = pd.DataFrame({'AQI Value': prediction})
@@ -123,8 +121,8 @@ with kpi_head[1]:
 
 st.markdown("---")
 col1, col2, col3, = st.columns(3)
-lb = df[df.year<=kpi_yr[1]]
-kpi_df = lb[lb.year>=kpi_yr[0]]
+lb = df[df.year <= kpi_yr[1]]
+kpi_df = lb[lb.year >= kpi_yr[0]]
 lowest = kpi_df[['month', 'aqi']].groupby('month').mean().values
 low, low_val = np.argmin(lowest), min(lowest)[0]
 col1.metric("CLEANEST MONTH IN THE YEAR ", month_map[low] + " 🍃", int(low_val), 'normal',

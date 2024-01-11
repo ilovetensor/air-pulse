@@ -9,7 +9,7 @@ import bisect
 
 def create_map(id, lst):
     id2 = [str(int(s)) for s in lst]
-    fig, ax = plt.subplots(figsize=(2.3,1.5))
+    fig, ax = plt.subplots(figsize=(2.3, 1.5))
     mybars = ax.barh(id2, lst, color="#FFC600")
 
     for i, bar in enumerate(mybars):
@@ -29,8 +29,6 @@ def create_map(id, lst):
     encode = base64.b64encode(tmp.getvalue()).decode('utf-8')
     plt.close()
     return encode
-
-
 
 
 def create_icon(pollutant_avg, pollutant_id):
@@ -56,16 +54,16 @@ def create_icon(pollutant_avg, pollutant_id):
         breakpoints = [50, 100, 150, 350]
         colors = ["green", "orange", "red", "black"]
     elif pollutant_id == "AQI":
-        breakpoints = [0, 50, 150, 200, 300]
-        colors = ["green", "yellow", "orange","red", "black"]
+        breakpoints = [50, 150, 200, 300]
+        colors = ["green", "orange", "red", "black"]
     else:
         # Handle any other pollutant IDs as needed
         breakpoints = []
         colors = []
 
     color = colors[max(0, bisect.bisect(breakpoints, pollutant_avg) - 1)]
-    text='#FFFFFF'
-    if color == "yellow": text='#000000'
+    text = '#FFFFFF'
+    if color == "yellow": text = '#000000'
 
     icon_plane = folium.plugins.BeautifyIcon(
         icon="plane",
@@ -83,13 +81,12 @@ def create_datacard(city, country_avg, state_avg, pollutant_avg, pollutant_id, s
     # map_encode = create_map(['country avg.', 'state avg.', 'city avg.'],
     #                         [country_avg[pollutant_id], state_avg[state, pollutant_id], pollutant_avg],
     #                         )
-    lst = np.array([country_avg[pollutant_id], state_avg[state, pollutant_id], pollutant_avg])
-    ct, st, cy = ((lst/max(lst))*1000)//10
+    lst = np.array([country_avg[pollutant_id], state_avg[pollutant_id][state], pollutant_avg])
+    ct, st, cy = ((lst / max(lst)) * 1000) // 10
     ct_val, st_val, cy_val = lst.astype('int')
     datacard_html = (f"""
     <div style="background-color: white; padding: 5px; padding-bottom: 0px; margin: 0px;">
         <h5>{city}</h5>{pollutant_id}  |  {state}
-        <link rel="stylesheet" href="style.css">
         <div class="chart-wrap">
             <div class="values">
                 <div class="value"> {ct_val}</div>
@@ -104,7 +101,7 @@ def create_datacard(city, country_avg, state_avg, pollutant_avg, pollutant_id, s
         </div>
     </div>
     <style>{card_css}</style>
-    """ )
+    """)
     # + '<img src=\'data:image/png;base64,{}\'>'.format(map_encode))
     popup = folium.Popup(folium.Html(datacard_html, script=True),
                          max_width=220,
