@@ -23,7 +23,7 @@ state_dict = {'Andhra Pradesh': 0,
               'Sikkim': 22,
               'Tamil Nadu': 23,
               'Uttar Pradesh': 24,
-              'Uttaranchal': 25,
+              'Uttarakhand': 25,
               'West Bengal': 26
               }
 state_dict_reverse = {0: 'Andhra Pradesh',
@@ -51,7 +51,7 @@ state_dict_reverse = {0: 'Andhra Pradesh',
                       22: 'Sikkim',
                       23: 'Tamil Nadu',
                       24: 'Uttar Pradesh',
-                      25: 'Uttaranchal',
+                      25: 'Uttarakhand',
                       26: 'West Bengal'}
 
 month_map = {
