@@ -9,12 +9,11 @@ import base64
 from utils.constants import state_dict, state_dict_reverse, month_map
 
 
-conn = st.connection("snowflake")
-
-
 st.set_page_config(layout='wide', initial_sidebar_state='expanded',
                    page_icon='🪨', page_title='AQI Future Predictions', )
-)
+
+
+conn = st.connection("snowflake")
 
 
 @st.cache_data()

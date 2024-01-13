@@ -7,11 +7,13 @@ from utils.constants import state_dict, state_dict_reverse, month_map
 from scipy.stats import pearsonr
 import base64
 
+st.set_page_config(layout="wide", page_icon="⛏", page_title="AQI impacts")
+
+
 conn = st.connection("snowflake")
 np.seterr(divide='ignore', invalid='ignore', all='ignore')
 
 # conn = st.connection("snowflake")
-st.set_page_config(layout="wide")
 
 def get_image_as_base64(file):
     with open(file, 'rb') as f:
