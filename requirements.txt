@@ -13,3 +13,4 @@ seaborn~=0.13.0
 scikit-learn
 scipy
 snowflake-connector-python
+snowflake-snowpark-python
