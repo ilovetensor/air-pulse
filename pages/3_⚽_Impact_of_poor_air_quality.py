@@ -233,11 +233,16 @@ st.plotly_chart(fig_veh_c, use_container_width=True)
 # Electricity
 
 st.markdown('## 3. Peak smog, peak watts ')
+st.markdown("""The Electricity Demands play a large impact on AQI levels for some of the states. Most of them showed a 
+positive relation. 
 
+States with positive relations may show the energy production's adverse affects while the negative relations show
+a wise public which is using more electric powers than using coals and petroleum resulting in dropped AQI LEVELS !!""")
 electricity, df_electricity = load_electricity()
 
 elec_cols = st.columns([1, 3])
 with elec_cols[0]:
+    st.subheader('Electricity Demands ')
     elec_state = st.selectbox("Select the state", df_electricity.columns, key='ss')
 
     elec_filter = st.selectbox("Select the type of filter", ['By Year', 'By Month'], key='ssa')
@@ -281,7 +286,10 @@ fig_elec_c.update_layout(title=f'Correlation of states AQI with Electricity Cons
 st.plotly_chart(fig_elec_c, use_container_width=True)
 
 st.markdown("## Life, Population, Coal = Everything")
+st.markdown("""
+Have a quick view of how other external factors have effect on AQI levels monthly and annually at the Country level. 
 
+""")
 
 def preprocess_country_data(df, data, monthly=False):
     data = data[['DATE', 'INDIA']]
@@ -392,4 +400,6 @@ if multiple_plots == 'Life Expectancy at Birth':
     draw_analysis_country(life, 'life_s', multiple_plots)
 if multiple_plots == 'Population Density':
     draw_analysis_country(population, 'pop_sdf', multiple_plots)
+
+st.markdown("**Coal Production** shows a very high relation with AQI levels for monthly average.  ")
 st.markdown('---')
