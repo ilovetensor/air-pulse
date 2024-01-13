@@ -5,12 +5,32 @@ import streamlit as st
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from utils.constants import state_dict, state_dict_reverse, month_map
 from scipy.stats import pearsonr
+import base64
 
 np.seterr(divide='ignore', invalid='ignore', all='ignore')
 
 # conn = st.connection("snowflake")
 st.set_page_config(layout="wide")
 
+def get_image_as_base64(file):
+    with open(file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+with open("style_page1.css") as file:
+    st.markdown(f'<style>{file.read()}</style>', unsafe_allow_html=True)
+
+img = get_image_as_base64('templates/back.jpg')
+st.markdown(f"""
+    <style>
+    [data-testid="stAppViewContainer"]{{
+    background-image: url("data:image/png;base64,{img}");
+    background-color: grey;
+    background-size: cover;
+    opacity: blur;
+    }}
+    </style>
+""", unsafe_allow_html=True)
 
 @st.cache_data()
 def load_data():

@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
+import base64
 
 from utils.constants import state_dict, state_dict_reverse, month_map
 
@@ -11,7 +12,9 @@ from utils.constants import state_dict, state_dict_reverse, month_map
 # conn = st.connection("snowflake")
 
 
-# st.set_page_config(layout='wide', initial_sidebar_state='expanded')
+st.set_page_config(layout='wide', initial_sidebar_state='expanded',
+                   page_icon='🪨', page_title='AQI Future Predictions', )
+)
 
 
 @st.cache_data()
@@ -38,6 +41,31 @@ def weighted_average_prediction(models: list, weights: list, predict_df: pd.Data
     preds['weighted_pred'] = (preds * weights).sum(axis=1) / sum(weights)
     return preds['weighted_pred']
 
+
+def get_image_as_base64(file):
+    with open(file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def get_image_as_base64(file):
+    with open(file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+with open("style_page1.css") as file:
+    st.markdown(f'<style>{file.read()}</style>', unsafe_allow_html=True)
+
+img = get_image_as_base64('templates/1567736.png')
+st.markdown(f"""
+    <style>
+    [data-testid="stAppViewContainer"]{{
+    background-image: url("data:image/png;base64,{img}");
+    background-color: grey;
+    background-size: cover;
+    opacity: blur;
+    }}
+    </style>
+""", unsafe_allow_html=True)
 
 st.title("AQI Levels Forecasting ")
 st.subheader("Take actions based of upcoming trends")
@@ -193,15 +221,12 @@ fig_heatmap.update_layout(title="Heatmap of AQI Levels Across States (2000 and l
 st.plotly_chart(fig_heatmap, use_container_width=True)
 
 # Provide summary statistics for the selected year
-st.subheader("Summary Statistics for the Selected Year")
-selected_year_data = df[df['year'] == year_selected]
-st.dataframe(selected_year_data.describe())
+# st.subheader("Summary Statistics for the Selected Year")
+# selected_year_data = df[df['year'] == year_selected]
+# st.dataframe(selected_year_data.describe())
 
-# Add a download button for the predictions dataframe
-st.subheader("Download Predictions Data")
-if st.button("Download Predictions CSV"):
-    st.download_button("Download Predictions CSV", pred_df.to_csv(), key="predictions_csv")
-
-# Add a disclaimer or any other relevant information
-st.sidebar.subheader("Disclaimer")
-st.sidebar.markdown("This is a forecasting model, and predictions may not be accurate. Use at your own discretion.")
+# # Add a download button for the predictions dataframe
+# st.subheader("Download Predictions Data")
+# if st.button("Download Predictions CSV"):
+#     st.download_button("Download Predictions CSV", pred_df.to_csv(), key="predictions_csv")
+#

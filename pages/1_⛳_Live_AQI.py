@@ -1,5 +1,5 @@
 from io import StringIO
-
+import base64
 import folium
 import pandas as pd
 import requests
@@ -14,7 +14,10 @@ import numpy as np
 import plotly.graph_objects as go
 
 api_key = st.secrets["api_key"]
-
+def get_image_as_base64(file):
+    with open(file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
 @st.cache_data()
 def load_data():
@@ -56,7 +59,28 @@ with open('pages/style.css', 'r') as f:
     card_css = f.read()
 
 st.set_page_config(layout="wide",
-                   initial_sidebar_state="collapsed")
+                   initial_sidebar_state="collapsed",
+                   page_icon='⛳', page_title='Live AQI',)
+
+with open("style_page1.css") as file:
+    st.markdown(f'<style>{file.read()}</style>', unsafe_allow_html=True)
+
+img = get_image_as_base64('templates/58328.jpg')
+
+
+st.markdown(f"""
+    <style>
+    [data-testid="stAppViewContainer"]{{
+    background-image: url("data:image/png;base64,{img}");
+    background-color: grey;
+    background-size: cover;
+    opacity: blur;
+    }}
+    </style>
+""", unsafe_allow_html=True)
+img = get_image_as_base64('templates/1761746.jpg')
+
+
 st.title("Real-Time AQI & Hotspots 💨")
 st.subheader("Map Your Way to Cleaner Air")
 

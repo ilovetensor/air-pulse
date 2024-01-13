@@ -1,5 +1,5 @@
 html_code = """
-<div>
+<div style="background: transparent;">
   <h1>Breathe Smarter:<br> Know About Your
     <span class='location'></span>'s 
     <span class='time-period'></span> Air
@@ -13,6 +13,9 @@ html_code = """
     font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: rgba(0,0,0,0);
   }
+  * {
+    background: rgba(0,0,0,0);
+  }
 
   div {
     text-align: left;
@@ -23,14 +26,14 @@ html_code = """
    
     font-size: 20px;
     letter-spacing: 1px;
-    color: black;
+    color: #001d3d;
     animation-duration: 3s;
   }
 
   .location, .time-period {
     display: inline-block;
     text-transform: ;
-    color: blue;
+    color: white;
     letter-spacing: 3px;
     width: auto;
     animation: slidedown 3s infinite;

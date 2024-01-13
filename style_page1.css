@@ -5,14 +5,9 @@
     color: white;
 }
 
-iframe {
-    color-scheme: light !important;
-}
-
 [data-testid="block-container"] {
-    backdrop-filter: blur(0px);
-    background: linear-gradient(rgb(255 255 255 / 0%) 0, rgba(0, 0, 0, 0) 544px, rgb(1 30 54 / 89%) 911px, #01121ef2 100%);
-    backdrop-filter: blur(4px);
+    background: linear-gradient(rgb(255 255 255 / 0%) 0, rgb(0,0,0) 484px, #000 100%);
+    backdrop-filter: blur(10px);
     color: white;
 }
 [data-testid="StyledLinkIconContainer"]{
@@ -21,8 +16,6 @@ iframe {
 [data-testid="baseButton-header"]{
     color: white;
 }
-
-
 [data-testid="baseButton-headerNoPadding"]{
     color: white;
 }
@@ -30,7 +23,6 @@ iframe {
 [data-testid="stSidebarNavItems"] span{
     color: white;
 }
-
 [data-testid="stSidebar"]{
    /*background: linear-gradient(rgb(0 0 0 / 70%) 0, rgb(0 0 0 / 33%) 500px, rgba(0,0,0,0)771px, rgba(0,0,0,0) 100%);*/
     background-color: rgba(0,0,0,0);
@@ -39,9 +31,7 @@ iframe {
 }
 [data-testid="stSidebarNavItems"]{
 
-    backdrop-filter: blur(30px);
-    height: 300px;
-
+    backdrop-filter: blur(10px);
 }
 [data-testid="stSidebarNavLink"]:hover{
     background-color: rgba(255,255,255, 0.1);
@@ -52,7 +42,15 @@ iframe {
 .st-emotion-cache-nziaof, .st-emotion-cache-nziaof:hover {
          background-color: rgba(0 ,87 ,255, 0.3);
 }
-
+[data-testid="stMetric"]{
+    border-left: 4px solid rgb(255, 126, 216);
+    
+    border-radius: 2px;
+    box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.25);
+    padding: 15px 0px;
+    padding-left: 10px;
+    backdrop-filter: blur(10px);
+}
 
 
 [class="css-e2y4gp e1tzin5v0"]{
