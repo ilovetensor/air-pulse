@@ -55,7 +55,7 @@ def load_data():
     merged_df = merged_df[['state', 'month', 'year', 'aqi', 'resp']].drop_duplicates()
     return df, merged_df
 
-
+@st.cache_data()
 def load_vehicles():
     session = conn.session()
     df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
@@ -80,7 +80,7 @@ def load_vehicles():
     vehicles.drop(['DATE', 'INDIA'], inplace=True, axis=1)
     return vehicles, df
 
-
+@st.cache_data()
 def load_electricity():
     # df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
     session = conn.session()
