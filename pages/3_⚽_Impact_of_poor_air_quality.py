@@ -7,6 +7,7 @@ from utils.constants import state_dict, state_dict_reverse, month_map
 from scipy.stats import pearsonr
 import base64
 
+conn = st.connection("snowflake")
 np.seterr(divide='ignore', invalid='ignore', all='ignore')
 
 # conn = st.connection("snowflake")
@@ -41,8 +42,8 @@ def load_data():
     # df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
     respiratory = pd.read_csv('nb-playground/dataset/respiratory_problems_08_to_15.csv')
 
-    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
-
+    session = conn.session()
+    df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
     df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
     df.month = (df.month - 1).map(month_map)
@@ -81,8 +82,9 @@ def load_vehicles():
 
 
 def load_electricity():
-    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
-
+    # df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
+    session = conn.session()
+    df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
     df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
     df = df.groupby(['year', 'state', 'month'])['aqi'].mean().reset_index()
@@ -302,10 +304,12 @@ def load_external_data_yearly():
     life = pd.read_csv('nb-playground/dataset/life.csv', parse_dates=['DATE'])
     population = pd.read_csv('nb-playground/dataset/population.csv', parse_dates=['DATE'])
     coal = pd.read_csv('nb-playground/dataset/coal.csv', parse_dates=['DATE'])
-    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
-
+    # df
+    session = conn.session()
+    df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
     df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
+
     df = df.groupby(['year', 'state', 'month'])['aqi'].mean().reset_index()
     df = df.pivot(index=['year', 'month'], columns='state', values='aqi')
     # df.drop(df.columns[df.count() == 1], axis=1, inplace=True)
