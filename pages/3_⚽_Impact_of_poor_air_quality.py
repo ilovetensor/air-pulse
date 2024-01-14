@@ -309,7 +309,7 @@ def preprocess_country_data(df, data, monthly=False):
     data.drop(['DATE'], inplace=True, axis=1)
     return data
 
-# @st.cache_data()
+@st.cache_data()
 def load_external_data_yearly():
 
     life = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Life Expectancy at Birth - India'")
