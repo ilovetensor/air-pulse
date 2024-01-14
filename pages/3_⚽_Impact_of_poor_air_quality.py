@@ -76,7 +76,7 @@ def load_vehicles():
     vehicles['month'] = vehicles.DATE.dt.month
     vehicles.drop(vehicles.columns[vehicles.count() == 1], axis=1, inplace=True)
     vehicles.fillna(vehicles.mean(), inplace=True)
-    vehicles = pd.merge(df, vehicles, on=['year', 'month'], suffixes=('_veh', '_aqi'))
+    vehicles = pd.merge(df, vehicles, on=['year', 'month'], suffixes=('_aqi', '_veh'))
     vehicles.drop(['DATE', 'INDIA'], inplace=True, axis=1)
     return vehicles, df
 
@@ -101,7 +101,7 @@ def load_electricity():
     electricity['year'] = electricity.DATE.dt.year
     electricity['month'] = electricity.DATE.dt.month
     electricity.fillna(electricity.mean(), inplace=True)
-    electricity = pd.merge(df, electricity, on=['year', 'month'], suffixes=('_elec', '_aqi'))
+    electricity = pd.merge(df, electricity, on=['year', 'month'], suffixes=('_aqi','_elec',))
     electricity.drop(['DATE', 'INDIA'], inplace=True, axis=1)
 
     return electricity, df
@@ -239,6 +239,7 @@ positive relation.
 States with positive relations may show the energy production's adverse affects while the negative relations show
 a wise public which is using more electric powers than using coals and petroleum resulting in dropped AQI LEVELS !!""")
 electricity, df_electricity = load_electricity()
+
 
 elec_cols = st.columns([1, 3])
 with elec_cols[0]:
