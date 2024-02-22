@@ -13,7 +13,7 @@ st.set_page_config(layout='wide', initial_sidebar_state='expanded',
                    page_icon='🪨', page_title='AQI Future Predictions', )
 
 
-conn = st.connection("snowflake")
+# conn = st.connection("snowflake")
 
 
 @st.cache_data()
@@ -25,12 +25,12 @@ def load_model():
 
 @st.cache_data()
 def load_data():
-    # df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
-    # return df
-    session = conn.session()
-    table = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
-    table.columns = ['state', 'year', 'month', 'aqi']
-    return table
+    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
+    return df
+    # session = conn.session()
+    # table = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    # table.columns = ['state', 'year', 'month', 'aqi']
+    # return table
 
 
 def weighted_average_prediction(models: list, weights: list, predict_df: pd.DataFrame):
