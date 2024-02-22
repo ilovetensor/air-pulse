@@ -10,7 +10,7 @@ import base64
 st.set_page_config(layout="wide", page_icon="⛏", page_title="AQI impacts")
 
 
-conn = st.connection("snowflake")
+# conn = st.connection("snowflake")
 np.seterr(divide='ignore', invalid='ignore', all='ignore')
 
 # conn = st.connection("snowflake")
@@ -37,12 +37,17 @@ st.markdown(f"""
 
 @st.cache_data()
 def load_data():
-    session = conn.session()
-    respiratory = session.table('AIRPULSE.HISTORICAL_DATA.RESPIRATORY_PROBLEMS').to_pandas()
-    respiratory.columns = ['state', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
-       'Oct', 'Nov', 'Dec', 'Total', 'year']
-    df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    # session = conn.session()
+    # respiratory = session.table('AIRPULSE.HISTORICAL_DATA.RESPIRATORY_PROBLEMS').to_pandas()
+    # respiratory.columns = ['state', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
+    #    'Oct', 'Nov', 'Dec', 'Total', 'year']
     # df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    # # df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    
+    respiratory = pd.read_csv('nb-playground/dataset/respiratory_problems_08_to_15.csv')
+    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
+
+    
     df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
     df.month = (df.month - 1).map(month_map)
@@ -57,8 +62,11 @@ def load_data():
 
 @st.cache_data()
 def load_vehicles():
-    session = conn.session()
-    df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    # session = conn.session()
+    # df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    
+    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
+    
     df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
     df = df.groupby(['year', 'state', 'month'])['aqi'].mean().reset_index()
@@ -67,8 +75,11 @@ def load_vehicles():
     df.fillna(df.mean(), inplace=True)
     df.columns = ["".join(i.split()).upper() for i in df.columns]
 
-    vehicles = conn.query("SELECT * FROM INDIA_ECONOMIC_MONITOR.ECONOMY.IDH_DATA WHERE TITLE = 'Passenger Vehicle Registrations (Month, ex Telangana)'")
-    vehicles['DATE'] = pd.to_datetime(vehicles['DATE'])
+    # vehicles = conn.query("SELECT * FROM INDIA_ECONOMIC_MONITOR.ECONOMY.IDH_DATA WHERE TITLE = 'Passenger Vehicle Registrations (Month, ex Telangana)'")
+    # vehicles['DATE'] = pd.to_datetime(vehicles['DATE'])
+        
+    vehicles = pd.read_csv('nb-playground/dataset/vehicles.csv', parse_dates=['DATE'])
+
     vehicles.drop(['CATEGORY', 'SUBCATEGORY', 'SOURCE', 'UNIT', 'FREQUENCY', 'CURRENCY',
                    'IDENTIFIER', 'TITLE', ], inplace=True, axis=1)
 
@@ -82,9 +93,9 @@ def load_vehicles():
 
 @st.cache_data()
 def load_electricity():
-    # df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
-    session = conn.session()
-    df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
+    # session = conn.session()
+    # df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
     df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
     df = df.groupby(['year', 'state', 'month'])['aqi'].mean().reset_index()
@@ -93,8 +104,10 @@ def load_electricity():
     df.fillna(df.mean(), inplace=True)
     df.columns = ["".join(i.split()).upper() for i in df.columns]
 
-    electricity = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Electricity Demand (Monthly)'")
-    electricity['DATE'] = pd.to_datetime(electricity['DATE'])
+    electricity = pd.read_csv('nb-playground/dataset/electricity_demand.csv', parse_dates=['DATE'])
+
+    # electricity = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Electricity Demand (Monthly)'")
+    # electricity['DATE'] = pd.to_datetime(electricity['DATE'])
 
     electricity.drop(['CATEGORY', 'SUBCATEGORY', 'SOURCE', 'UNIT', 'FREQUENCY', 'CURRENCY',
                       'IDENTIFIER', 'TITLE', ], inplace=True, axis=1)
@@ -313,17 +326,27 @@ def preprocess_country_data(df, data, monthly=False):
 @st.cache_data()
 def load_external_data_yearly():
 
-    life = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Life Expectancy at Birth - India'")
-    population = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Population Density - India'")
-    coal = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Coal Production (Monthly)'")
-    life['DATE'] = pd.to_datetime((life.DATE))
-    population['DATE'] = pd.to_datetime((population.DATE))
-    coal['DATE'] = pd.to_datetime((coal.DATE))
+    # life = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Life Expectancy at Birth - India'")
+    # population = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Population Density - India'")
+    # coal = conn.query("SELECT * FROM INDIA_SOCIAL_IMPACT_DATA_SET.HACKATHON.IDH_DATA WHERE TITLE = 'Coal Production (Monthly)'")
+    # life['DATE'] = pd.to_datetime((life.DATE))
+    # population['DATE'] = pd.to_datetime((population.DATE))
+    # coal['DATE'] = pd.to_datetime((coal.DATE))
     # life.fillna(0, inplace=True)
     # population.fillna(0, inplace=True)
     # coal.fillna(0, inplace=True)
-    session = conn.session()
-    df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+    
+    life = pd.read_csv('nb-playground/dataset/life.csv', parse_dates=['DATE'])
+    population = pd.read_csv('nb-playground/dataset/population.csv', parse_dates=['DATE'])
+    coal = pd.read_csv('nb-playground/dataset/coal.csv', parse_dates=['DATE'])
+
+
+    
+    # session = conn.session()
+    # df = session.table('AIRPULSE.HISTORICAL_DATA.AQI_PAST').to_pandas()
+
+    df = pd.read_csv("nb-playground/historical_data_cleaned.csv")
+
     df.columns = ['state', 'year', 'month', 'aqi']
     df.state = df.state.map(state_dict_reverse)
 
