@@ -27,7 +27,6 @@ def load_data():
     data = response_API.text
     df = pd.read_csv(StringIO(data))
     df.fillna(0, inplace=True)
-
     return df
 
 
@@ -172,19 +171,28 @@ HeatMap(heatmap_data, radius=radius, blur=blur).add_to(fg_heatmap)
 # Add LayerControl to manage visibility
 layers = folium.LayerControl(collapsed=False)
 
-# Checkbox functionality
+# Add feature groups to map based on checkbox functionality
 if is_marker and is_heatmap:
-    fgs = [fg_heatmap, fg_markers]
-if is_marker and not is_heatmap:
-    fgs = [fg_markers]
-if is_heatmap and not is_marker:
-    fgs = [fg_heatmap]
-if not is_heatmap and not is_marker:
-    fgs = []
+    fg_heatmap.add_to(m)
+    fg_markers.add_to(m)
+elif is_marker and not is_heatmap:
+    fg_markers.add_to(m)
+elif is_heatmap and not is_marker:
+    fg_heatmap.add_to(m)
+# If neither is selected, no feature groups are added
 
-# Displaying map with st_folium
+# Add LayerControl to manage visibility
+layers.add_to(m)
+
+# Displaying map with HTML rendering
 with maps_cols[0]:
-    st_folium(m, width=1000, feature_group_to_add=fgs, returned_objects=[])
+    for _ in range(4):
+        st.write('')
+    map_html = m._repr_html_()
+    # Fix the map height to fill the container (only for the main map div)
+    map_html = map_html.replace('style="height: 100%; width: 100%;"', 'style="height: 600px; width: 100%;"')
+    map_html = map_html.replace('style="height:100%; width:100%;"', 'style="height:600px; width:100%;"')
+    st.components.v1.html(map_html, width=1000, height=600)
 
 #
 
@@ -267,7 +275,7 @@ def load_state_data():
 
 filtered_state = state_avg
 
-m2 = folium.Map(location=[20.5937, 78.9629], zoom_start=5)
+m2 = folium.Map(location=[20.5937, 78.9629], zoom_start=5, height=660)
 ind_geojson = load_state_data()
 
 colormap = linear.RdPu_04.scale(
@@ -316,8 +324,16 @@ folium.GeoJson(
 fg_colormap = folium.FeatureGroup(name="colormap")
 colormap.caption = " color scale"
 
+# Add feature groups to the second map
+fg_geojson.add_to(m2)
+fg_colormap.add_to(m2)
+
 with state_cols[0]:
-    st_folium(m2, 'k', width=700, height=660, feature_group_to_add=[fg_geojson, fg_colormap], returned_objects=[])
+    map_html = m2._repr_html_()
+    # Fix the map height to fill the container (broader replacement since no popups)
+    map_html = map_html.replace('height: 100%;', 'height: 660px;')
+    map_html = map_html.replace('height:100%;', 'height:660px;')
+    st.components.v1.html(map_html, width=600, height=660)
 
 # Data Query : Bar Graph
 
