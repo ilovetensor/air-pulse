@@ -136,6 +136,13 @@ else:
     filtered_df = df[df['state'] == selected_state]
 
 # Create Map 1 : HEAT MAP & MARKERS
+st.markdown(f"""
+<style> 
+iframe {
+    max-width: -webkit-fill-available;
+}
+</style>
+""", unsafe_allow_html=True)
 
 m = folium.Map(location=[20.5937, 78.9629], zoom_start=5, width=900)
 
