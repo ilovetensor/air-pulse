@@ -137,7 +137,7 @@ else:
 
 # Create Map 1 : HEAT MAP & MARKERS
 
-m = folium.Map(location=[20.5937, 78.9629], zoom_start=5, width=800)
+m = folium.Map(location=[20.5937, 78.9629], zoom_start=5, width=900)
 
 # FeatureGroup for markers
 fg_markers = folium.FeatureGroup(name="Markers", overlay=True)
@@ -192,7 +192,7 @@ with maps_cols[0]:
     # Fix the map height to fill the container (only for the main map div)
     map_html = map_html.replace('style="height: 100%; width: 100%;"', 'style="height: 600px; width: 100%;"')
     map_html = map_html.replace('style="height:100%; width:100%;"', 'style="height:600px; width:100%;"')
-    st.components.v1.html(map_html, width=800, height=600)
+    st.components.v1.html(map_html, width=900, height=600)
 
 #
 
