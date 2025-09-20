@@ -138,9 +138,9 @@ else:
 # Create Map 1 : HEAT MAP & MARKERS
 st.markdown(f"""
 <style> 
-iframe {
+iframe {{
     max-width: -webkit-fill-available;
-}
+}}
 </style>
 """, unsafe_allow_html=True)
 
